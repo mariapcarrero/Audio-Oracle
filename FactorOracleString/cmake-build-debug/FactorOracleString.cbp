@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FactorOracleString"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFOS">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFOS/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLCS">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLCS/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestAddLetter">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestAddLetter/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FO">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FO/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FactorOracleString">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/FactorOracleString" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 FactorOracleString"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FactorOracleString/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/FactorOracleString" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 FactorOracleString/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFindBetter">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestFindBetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFindBetter"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFindBetter/fast">
+				<Option output="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/TestFindBetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFindBetter/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/FactorOracle.cpp">
+			<Option target="FO"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/FactorOracle.h">
+			<Option target="FO"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/catch.hpp">
+			<Option target="TestFOS"/>
+			<Option target="TestLCS"/>
+			<Option target="TestAddLetter"/>
+			<Option target="TestFindBetter"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/catch2.hpp">
+			<Option target="TestFOS"/>
+			<Option target="TestLCS"/>
+			<Option target="TestAddLetter"/>
+			<Option target="TestFindBetter"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/main.cpp">
+			<Option target="FactorOracleString"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/test_add_letter.cpp">
+			<Option target="TestAddLetter"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/test_find_better.cpp">
+			<Option target="TestFindBetter"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/test_fos.cpp">
+			<Option target="TestFOS"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/test_lcs.cpp">
+			<Option target="TestLCS"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/CLionProjects/FactorOracleString/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

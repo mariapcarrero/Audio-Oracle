@@ -1,0 +1,8 @@
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/TestFOS.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/TestLCS.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/TestAddLetter.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/FO.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/FactorOracleString.dir
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/cmake-build-debug/CMakeFiles/TestFindBetter.dir

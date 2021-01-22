@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/FactorOracle.h
+iostream
+-
+new
+-
+string
+-
+vector
+-
+variant
+-
+random
+-
+algorithm
+-
+
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/main.cpp
+FactorOracle.h
+/Users/mariapaulacarrero/CLionProjects/FactorOracleString/FactorOracle.h
+
