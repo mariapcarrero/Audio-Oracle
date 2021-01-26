@@ -128,6 +128,6 @@ int main()
 int main()
 {
     AudioOracle audio_oracle;
-    audio_oracle.AnalyseAudio("BlueJayCall.wav");
+    audio_oracle.AnalyseAudio("/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/BlueJayCall.wav");
    // exit(0);
 }

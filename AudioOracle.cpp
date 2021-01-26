@@ -62,13 +62,7 @@ void AudioOracle::AnalyseAudio(string sfName)
         {
             temp_vector.push_back(*(real_pointer+temp_counter));
         }
-        // cout <<"getData: " << *processedData.getData() << endl;
-      /*  for (int w = 0; w < 4096; w++)
-        {
-            cout << temp_vector[w] << ", ";
-        }
-        cout << endl;*/
-       // this->S.push_back(temp_vector);
+
         double * map_pointer = &(temp_vector[0]);
         this->feature_map.insert({counter, map_pointer});
         this->AddFrame(counter, temp_vector, 9.65 );
@@ -255,12 +249,8 @@ void AudioOracle::AddFrame(int i, vector <mrs_real> vector_real, double threshol
         iter = 0;
 
         while (iter < this->states_[k].transition_.size() && k > -1) {
-            //cout << "k b: " << k << endl;
-           // cout << "entro transition " << endl;
             double *v2_pointer = &(this->states_[k].transition_[iter].vector_real_[0]);
-           // cout << "v2: "<< *v2_pointer << endl;
             double *v1_pointer = &(vector_real[0]);
-           // cout << "v1: " << *v1_pointer << endl;
             iter++;
             double euclidean_result = vectorDistance(v1_pointer, (v1_pointer + 4095), v2_pointer);
            // cout << "euc result: " << euclidean_result << endl;
