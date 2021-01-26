@@ -44,15 +44,17 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle
+CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/AudioOracleEx.dir/all
+all: CMakeFiles/AO.dir/all
 all: CMakeFiles/TestFOS.dir/all
 all: CMakeFiles/TestLCS.dir/all
 all: CMakeFiles/TestAddLetter.dir/all
@@ -68,6 +70,8 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/AudioOracleEx.dir/clean
+clean: CMakeFiles/AO.dir/clean
 clean: CMakeFiles/TestFOS.dir/clean
 clean: CMakeFiles/TestLCS.dir/clean
 clean: CMakeFiles/TestAddLetter.dir/clean
@@ -78,20 +82,74 @@ clean: CMakeFiles/TestFindBetter.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/AudioOracleEx.dir
+
+# All Build rule for target.
+CMakeFiles/AudioOracleEx.dir/all: CMakeFiles/AO.dir/all
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/depend
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target AudioOracleEx"
+.PHONY : CMakeFiles/AudioOracleEx.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/AudioOracleEx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AudioOracleEx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/AudioOracleEx.dir/rule
+
+# Convenience name for target.
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/rule
+
+.PHONY : AudioOracleEx
+
+# clean rule for target.
+CMakeFiles/AudioOracleEx.dir/clean:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/clean
+.PHONY : CMakeFiles/AudioOracleEx.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/AO.dir
+
+# All Build rule for target.
+CMakeFiles/AO.dir/all:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/depend
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target AO"
+.PHONY : CMakeFiles/AO.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/AO.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AO.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/AO.dir/rule
+
+# Convenience name for target.
+AO: CMakeFiles/AO.dir/rule
+
+.PHONY : AO
+
+# clean rule for target.
+CMakeFiles/AO.dir/clean:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/clean
+.PHONY : CMakeFiles/AO.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/TestFOS.dir
 
 # All Build rule for target.
 CMakeFiles/TestFOS.dir/all: CMakeFiles/FO.dir/all
 	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/depend
 	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target TestFOS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target TestFOS"
 .PHONY : CMakeFiles/TestFOS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestFOS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestFOS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TestFOS.dir/rule
 
 # Convenience name for target.
@@ -111,14 +169,14 @@ CMakeFiles/TestFOS.dir/clean:
 CMakeFiles/TestLCS.dir/all: CMakeFiles/FO.dir/all
 	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/depend
 	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target TestLCS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target TestLCS"
 .PHONY : CMakeFiles/TestLCS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestLCS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestLCS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TestLCS.dir/rule
 
 # Convenience name for target.
@@ -138,14 +196,14 @@ CMakeFiles/TestLCS.dir/clean:
 CMakeFiles/TestAddLetter.dir/all: CMakeFiles/FO.dir/all
 	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/depend
 	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target TestAddLetter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target TestAddLetter"
 .PHONY : CMakeFiles/TestAddLetter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestAddLetter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestAddLetter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TestAddLetter.dir/rule
 
 # Convenience name for target.
@@ -165,14 +223,14 @@ CMakeFiles/TestAddLetter.dir/clean:
 CMakeFiles/FO.dir/all:
 	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/depend
 	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target FO"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target FO"
 .PHONY : CMakeFiles/FO.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FO.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/FO.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/FO.dir/rule
 
 # Convenience name for target.
@@ -192,14 +250,14 @@ CMakeFiles/FO.dir/clean:
 CMakeFiles/FactorOracleString.dir/all: CMakeFiles/FO.dir/all
 	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/depend
 	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target FactorOracleString"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target FactorOracleString"
 .PHONY : CMakeFiles/FactorOracleString.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FactorOracleString.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/FactorOracleString.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/FactorOracleString.dir/rule
 
 # Convenience name for target.
@@ -219,14 +277,14 @@ CMakeFiles/FactorOracleString.dir/clean:
 CMakeFiles/TestFindBetter.dir/all: CMakeFiles/FO.dir/all
 	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/depend
 	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target TestFindBetter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target TestFindBetter"
 .PHONY : CMakeFiles/TestFindBetter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestFindBetter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestFindBetter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TestFindBetter.dir/rule
 
 # Convenience name for target.

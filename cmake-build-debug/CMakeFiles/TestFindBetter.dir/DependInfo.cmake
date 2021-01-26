@@ -4,17 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/test_find_better.cpp" "/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o"
+  "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_find_better.cpp" "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles/FO.dir/DependInfo.cmake"
+  "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/FO.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle
+CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named AudioOracleEx
+
+# Build rule for target.
+AudioOracleEx: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleEx
+.PHONY : AudioOracleEx
+
+# fast build rule for target.
+AudioOracleEx/fast:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/build
+.PHONY : AudioOracleEx/fast
+
+#=============================================================================
+# Target rules for targets named AO
+
+# Build rule for target.
+AO: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AO
+.PHONY : AO
+
+# fast build rule for target.
+AO/fast:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/build
+.PHONY : AO/fast
 
 #=============================================================================
 # Target rules for targets named TestFOS
@@ -188,6 +214,33 @@ TestFindBetter/fast:
 	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/build
 .PHONY : TestFindBetter/fast
 
+AudioOracle.o: AudioOracle.cpp.o
+
+.PHONY : AudioOracle.o
+
+# target to build an object file
+AudioOracle.cpp.o:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.o
+.PHONY : AudioOracle.cpp.o
+
+AudioOracle.i: AudioOracle.cpp.i
+
+.PHONY : AudioOracle.i
+
+# target to preprocess a source file
+AudioOracle.cpp.i:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.i
+.PHONY : AudioOracle.cpp.i
+
+AudioOracle.s: AudioOracle.cpp.s
+
+.PHONY : AudioOracle.s
+
+# target to generate assembly for a file
+AudioOracle.cpp.s:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.s
+.PHONY : AudioOracle.cpp.s
+
 FactorOracle.o: FactorOracle.cpp.o
 
 .PHONY : FactorOracle.o
@@ -241,6 +294,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+marsyas_play_file.o: marsyas_play_file.cpp.o
+
+.PHONY : marsyas_play_file.o
+
+# target to build an object file
+marsyas_play_file.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o
+.PHONY : marsyas_play_file.cpp.o
+
+marsyas_play_file.i: marsyas_play_file.cpp.i
+
+.PHONY : marsyas_play_file.i
+
+# target to preprocess a source file
+marsyas_play_file.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.i
+.PHONY : marsyas_play_file.cpp.i
+
+marsyas_play_file.s: marsyas_play_file.cpp.s
+
+.PHONY : marsyas_play_file.s
+
+# target to generate assembly for a file
+marsyas_play_file.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.s
+.PHONY : marsyas_play_file.cpp.s
 
 test_add_letter.o: test_add_letter.cpp.o
 
@@ -356,6 +436,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... AudioOracleEx"
+	@echo "... AO"
 	@echo "... edit_cache"
 	@echo "... TestFOS"
 	@echo "... rebuild_cache"
@@ -364,12 +446,18 @@ help:
 	@echo "... FO"
 	@echo "... FactorOracleString"
 	@echo "... TestFindBetter"
+	@echo "... AudioOracle.o"
+	@echo "... AudioOracle.i"
+	@echo "... AudioOracle.s"
 	@echo "... FactorOracle.o"
 	@echo "... FactorOracle.i"
 	@echo "... FactorOracle.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... marsyas_play_file.o"
+	@echo "... marsyas_play_file.i"
+	@echo "... marsyas_play_file.s"
 	@echo "... test_add_letter.o"
 	@echo "... test_add_letter.i"
 	@echo "... test_add_letter.s"

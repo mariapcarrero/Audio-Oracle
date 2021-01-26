@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle
+CMAKE_SOURCE_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/FO.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/FO.dir/flags.make
 
 CMakeFiles/FO.dir/FactorOracle.cpp.o: CMakeFiles/FO.dir/flags.make
 CMakeFiles/FO.dir/FactorOracle.cpp.o: ../FactorOracle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FO.dir/FactorOracle.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FO.dir/FactorOracle.cpp.o -c /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/FactorOracle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FO.dir/FactorOracle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FO.dir/FactorOracle.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/FactorOracle.cpp
 
 CMakeFiles/FO.dir/FactorOracle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FO.dir/FactorOracle.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/FactorOracle.cpp > CMakeFiles/FO.dir/FactorOracle.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/FactorOracle.cpp > CMakeFiles/FO.dir/FactorOracle.cpp.i
 
 CMakeFiles/FO.dir/FactorOracle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FO.dir/FactorOracle.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/FactorOracle.cpp -o CMakeFiles/FO.dir/FactorOracle.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/FactorOracle.cpp -o CMakeFiles/FO.dir/FactorOracle.cpp.s
 
 # Object files for target FO
 FO_OBJECTS = \
@@ -80,7 +80,7 @@ FO_EXTERNAL_OBJECTS =
 libFO.a: CMakeFiles/FO.dir/FactorOracle.cpp.o
 libFO.a: CMakeFiles/FO.dir/build.make
 libFO.a: CMakeFiles/FO.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libFO.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libFO.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/FO.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FO.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/FO.dir/clean:
 .PHONY : CMakeFiles/FO.dir/clean
 
 CMakeFiles/FO.dir/depend:
-	cd /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug /Users/mariapaulacarrero/Documents/MARSYAS/Audio-Oracle/cmake-build-debug/CMakeFiles/FO.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/FO.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/FO.dir/depend
 
