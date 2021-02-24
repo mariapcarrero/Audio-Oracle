@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TestFOS.dir/test_fos.cpp.o"
+  "CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o"
   "TestFOS"
   "TestFOS.pdb"
 )

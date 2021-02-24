@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o"
+  "CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o"
   "TestAddLetter"
   "TestAddLetter.pdb"
 )

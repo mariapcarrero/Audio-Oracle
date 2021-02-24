@@ -6,15 +6,39 @@
 
 #IncludeRegexTransform: 
 
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.cpp
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/AudioFile.h
+iostream
+-
+vector
+-
+cassert
+-
+string
+-
+cstring
+-
+fstream
+-
+unordered_map
+-
+iterator
+-
+algorithm
+-
+
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.cpp
 AudioOracle.h
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.h
 marsyas/system/MarSystem.h
 -
 marsyas/system/MarSystemManager.h
 -
+../3rd-party/AudioFile.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/AudioFile.h
+cmath
+-
 
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.h
 iostream
 -
 new

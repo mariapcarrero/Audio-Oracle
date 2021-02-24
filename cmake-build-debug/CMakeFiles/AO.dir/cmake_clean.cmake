@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/AO.dir/AudioOracle.cpp.o"
+  "CMakeFiles/AO.dir/src/AudioOracle.cpp.o"
   "libAO.a"
   "libAO.pdb"
 )

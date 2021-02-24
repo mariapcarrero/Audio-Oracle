@@ -57,27 +57,27 @@ include CMakeFiles/FactorOracleString.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/FactorOracleString.dir/flags.make
 
-CMakeFiles/FactorOracleString.dir/main.cpp.o: CMakeFiles/FactorOracleString.dir/flags.make
-CMakeFiles/FactorOracleString.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FactorOracleString.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FactorOracleString.dir/main.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/main.cpp
+CMakeFiles/FactorOracleString.dir/src/main.cpp.o: CMakeFiles/FactorOracleString.dir/flags.make
+CMakeFiles/FactorOracleString.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FactorOracleString.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FactorOracleString.dir/src/main.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/main.cpp
 
-CMakeFiles/FactorOracleString.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FactorOracleString.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/main.cpp > CMakeFiles/FactorOracleString.dir/main.cpp.i
+CMakeFiles/FactorOracleString.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FactorOracleString.dir/src/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/main.cpp > CMakeFiles/FactorOracleString.dir/src/main.cpp.i
 
-CMakeFiles/FactorOracleString.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FactorOracleString.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/main.cpp -o CMakeFiles/FactorOracleString.dir/main.cpp.s
+CMakeFiles/FactorOracleString.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FactorOracleString.dir/src/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/main.cpp -o CMakeFiles/FactorOracleString.dir/src/main.cpp.s
 
 # Object files for target FactorOracleString
 FactorOracleString_OBJECTS = \
-"CMakeFiles/FactorOracleString.dir/main.cpp.o"
+"CMakeFiles/FactorOracleString.dir/src/main.cpp.o"
 
 # External object files for target FactorOracleString
 FactorOracleString_EXTERNAL_OBJECTS =
 
-FactorOracleString: CMakeFiles/FactorOracleString.dir/main.cpp.o
+FactorOracleString: CMakeFiles/FactorOracleString.dir/src/main.cpp.o
 FactorOracleString: CMakeFiles/FactorOracleString.dir/build.make
 FactorOracleString: libFO.a
 FactorOracleString: CMakeFiles/FactorOracleString.dir/link.txt

@@ -57,27 +57,27 @@ include CMakeFiles/TestFOS.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TestFOS.dir/flags.make
 
-CMakeFiles/TestFOS.dir/test_fos.cpp.o: CMakeFiles/TestFOS.dir/flags.make
-CMakeFiles/TestFOS.dir/test_fos.cpp.o: ../test_fos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestFOS.dir/test_fos.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestFOS.dir/test_fos.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_fos.cpp
+CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o: CMakeFiles/TestFOS.dir/flags.make
+CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o: ../tests/Factor-Oracle/test_fos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_fos.cpp
 
-CMakeFiles/TestFOS.dir/test_fos.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestFOS.dir/test_fos.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_fos.cpp > CMakeFiles/TestFOS.dir/test_fos.cpp.i
+CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_fos.cpp > CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.i
 
-CMakeFiles/TestFOS.dir/test_fos.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestFOS.dir/test_fos.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_fos.cpp -o CMakeFiles/TestFOS.dir/test_fos.cpp.s
+CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_fos.cpp -o CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.s
 
 # Object files for target TestFOS
 TestFOS_OBJECTS = \
-"CMakeFiles/TestFOS.dir/test_fos.cpp.o"
+"CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o"
 
 # External object files for target TestFOS
 TestFOS_EXTERNAL_OBJECTS =
 
-TestFOS: CMakeFiles/TestFOS.dir/test_fos.cpp.o
+TestFOS: CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o
 TestFOS: CMakeFiles/TestFOS.dir/build.make
 TestFOS: libFO.a
 TestFOS: CMakeFiles/TestFOS.dir/link.txt

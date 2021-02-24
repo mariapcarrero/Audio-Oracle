@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o"
+  "CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o"
   "TestFindBetter"
   "TestFindBetter.pdb"
 )

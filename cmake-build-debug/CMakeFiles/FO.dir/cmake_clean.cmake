@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FO.dir/FactorOracle.cpp.o"
+  "CMakeFiles/FO.dir/src/Factor-Oracle/FactorOracle.cpp.o"
   "libFO.a"
   "libFO.pdb"
 )

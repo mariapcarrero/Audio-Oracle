@@ -57,27 +57,27 @@ include CMakeFiles/TestFindBetter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TestFindBetter.dir/flags.make
 
-CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o: CMakeFiles/TestFindBetter.dir/flags.make
-CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o: ../test_find_better.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_find_better.cpp
+CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o: CMakeFiles/TestFindBetter.dir/flags.make
+CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o: ../tests/Factor-Oracle/test_find_better.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_find_better.cpp
 
-CMakeFiles/TestFindBetter.dir/test_find_better.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestFindBetter.dir/test_find_better.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_find_better.cpp > CMakeFiles/TestFindBetter.dir/test_find_better.cpp.i
+CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_find_better.cpp > CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.i
 
-CMakeFiles/TestFindBetter.dir/test_find_better.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestFindBetter.dir/test_find_better.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_find_better.cpp -o CMakeFiles/TestFindBetter.dir/test_find_better.cpp.s
+CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_find_better.cpp -o CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.s
 
 # Object files for target TestFindBetter
 TestFindBetter_OBJECTS = \
-"CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o"
+"CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o"
 
 # External object files for target TestFindBetter
 TestFindBetter_EXTERNAL_OBJECTS =
 
-TestFindBetter: CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o
+TestFindBetter: CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o
 TestFindBetter: CMakeFiles/TestFindBetter.dir/build.make
 TestFindBetter: libFO.a
 TestFindBetter: CMakeFiles/TestFindBetter.dir/link.txt

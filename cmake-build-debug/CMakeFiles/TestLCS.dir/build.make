@@ -57,27 +57,27 @@ include CMakeFiles/TestLCS.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TestLCS.dir/flags.make
 
-CMakeFiles/TestLCS.dir/test_lcs.cpp.o: CMakeFiles/TestLCS.dir/flags.make
-CMakeFiles/TestLCS.dir/test_lcs.cpp.o: ../test_lcs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestLCS.dir/test_lcs.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestLCS.dir/test_lcs.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_lcs.cpp
+CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o: CMakeFiles/TestLCS.dir/flags.make
+CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o: ../tests/Factor-Oracle/test_lcs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_lcs.cpp
 
-CMakeFiles/TestLCS.dir/test_lcs.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestLCS.dir/test_lcs.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_lcs.cpp > CMakeFiles/TestLCS.dir/test_lcs.cpp.i
+CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_lcs.cpp > CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.i
 
-CMakeFiles/TestLCS.dir/test_lcs.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLCS.dir/test_lcs.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_lcs.cpp -o CMakeFiles/TestLCS.dir/test_lcs.cpp.s
+CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_lcs.cpp -o CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.s
 
 # Object files for target TestLCS
 TestLCS_OBJECTS = \
-"CMakeFiles/TestLCS.dir/test_lcs.cpp.o"
+"CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o"
 
 # External object files for target TestLCS
 TestLCS_EXTERNAL_OBJECTS =
 
-TestLCS: CMakeFiles/TestLCS.dir/test_lcs.cpp.o
+TestLCS: CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o
 TestLCS: CMakeFiles/TestLCS.dir/build.make
 TestLCS: libFO.a
 TestLCS: CMakeFiles/TestLCS.dir/link.txt

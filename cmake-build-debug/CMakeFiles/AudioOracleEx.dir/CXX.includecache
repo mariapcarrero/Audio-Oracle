@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.h
 iostream
 -
 new
@@ -30,11 +30,11 @@ marsyas/system/MarSystemManager.h
 map
 -
 
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/marsyas_play_file.cpp
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp
 MarSystemManager.h
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/MarSystemManager.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/MarSystemManager.h
 AudioOracle.h
-/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.h
+/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.h
 
 /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include/marsyas/Conversions.h
 marsyas/common_header.h

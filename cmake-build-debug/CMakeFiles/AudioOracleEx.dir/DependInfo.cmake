@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/marsyas_play_file.cpp" "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o"
+  "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp" "/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

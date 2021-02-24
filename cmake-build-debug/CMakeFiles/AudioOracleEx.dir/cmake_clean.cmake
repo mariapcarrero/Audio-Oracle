@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "AudioOracleEx"
   "AudioOracleEx.pdb"
-  "CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o"
+  "CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

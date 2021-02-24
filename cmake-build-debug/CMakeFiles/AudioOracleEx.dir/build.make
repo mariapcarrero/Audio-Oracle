@@ -57,27 +57,27 @@ include CMakeFiles/AudioOracleEx.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AudioOracleEx.dir/flags.make
 
-CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
-CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o: ../marsyas_play_file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/marsyas_play_file.cpp
+CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o: ../src/marsyas_play_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp
 
-CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/marsyas_play_file.cpp > CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.i
+CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp > CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.i
 
-CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/marsyas_play_file.cpp -o CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.s
+CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp -o CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s
 
 # Object files for target AudioOracleEx
 AudioOracleEx_OBJECTS = \
-"CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o"
+"CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o"
 
 # External object files for target AudioOracleEx
 AudioOracleEx_EXTERNAL_OBJECTS =
 
-AudioOracleEx: CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o
 AudioOracleEx: CMakeFiles/AudioOracleEx.dir/build.make
 AudioOracleEx: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/lib/libmarsyas.dylib
 AudioOracleEx: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/lib/libmarsyas-qt5.a

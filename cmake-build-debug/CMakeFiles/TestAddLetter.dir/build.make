@@ -57,27 +57,27 @@ include CMakeFiles/TestAddLetter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TestAddLetter.dir/flags.make
 
-CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o: CMakeFiles/TestAddLetter.dir/flags.make
-CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o: ../test_add_letter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_add_letter.cpp
+CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o: CMakeFiles/TestAddLetter.dir/flags.make
+CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o: ../tests/Factor-Oracle/test_add_letter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_add_letter.cpp
 
-CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_add_letter.cpp > CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.i
+CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_add_letter.cpp > CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.i
 
-CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/test_add_letter.cpp -o CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.s
+CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/tests/Factor-Oracle/test_add_letter.cpp -o CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.s
 
 # Object files for target TestAddLetter
 TestAddLetter_OBJECTS = \
-"CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o"
+"CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o"
 
 # External object files for target TestAddLetter
 TestAddLetter_EXTERNAL_OBJECTS =
 
-TestAddLetter: CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o
+TestAddLetter: CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o
 TestAddLetter: CMakeFiles/TestAddLetter.dir/build.make
 TestAddLetter: libFO.a
 TestAddLetter: CMakeFiles/TestAddLetter.dir/link.txt

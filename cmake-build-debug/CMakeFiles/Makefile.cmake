@@ -52,9 +52,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/AudioOracleOutput.dir/DependInfo.cmake"
+  "CMakeFiles/TestFOS.dir/DependInfo.cmake"
+  "CMakeFiles/AudioRearrange.dir/DependInfo.cmake"
   "CMakeFiles/AudioOracleEx.dir/DependInfo.cmake"
   "CMakeFiles/AO.dir/DependInfo.cmake"
-  "CMakeFiles/TestFOS.dir/DependInfo.cmake"
   "CMakeFiles/TestLCS.dir/DependInfo.cmake"
   "CMakeFiles/TestAddLetter.dir/DependInfo.cmake"
   "CMakeFiles/FO.dir/DependInfo.cmake"

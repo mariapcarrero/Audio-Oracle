@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -78,8 +67,19 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
-all: cmake_check_build_system
+all:
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles 0
@@ -105,16 +105,50 @@ preinstall/fast:
 	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
-# clear depends
-depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-.PHONY : depend
+#=============================================================================
+# Target rules for targets named AudioOracleOutput
+
+# Build rule for target.
+AudioOracleOutput:
+	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleOutput
+.PHONY : AudioOracleOutput
+
+# fast build rule for target.
+AudioOracleOutput/fast:
+	$(MAKE) -f CMakeFiles/AudioOracleOutput.dir/build.make CMakeFiles/AudioOracleOutput.dir/build
+.PHONY : AudioOracleOutput/fast
+
+#=============================================================================
+# Target rules for targets named TestFOS
+
+# Build rule for target.
+TestFOS:
+	$(MAKE) -f CMakeFiles/Makefile2 TestFOS
+.PHONY : TestFOS
+
+# fast build rule for target.
+TestFOS/fast:
+	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/build
+.PHONY : TestFOS/fast
+
+#=============================================================================
+# Target rules for targets named AudioRearrange
+
+# Build rule for target.
+AudioRearrange:
+	$(MAKE) -f CMakeFiles/Makefile2 AudioRearrange
+.PHONY : AudioRearrange
+
+# fast build rule for target.
+AudioRearrange/fast:
+	$(MAKE) -f CMakeFiles/AudioRearrange.dir/build.make CMakeFiles/AudioRearrange.dir/build
+.PHONY : AudioRearrange/fast
 
 #=============================================================================
 # Target rules for targets named AudioOracleEx
 
 # Build rule for target.
-AudioOracleEx: cmake_check_build_system
+AudioOracleEx:
 	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleEx
 .PHONY : AudioOracleEx
 
@@ -127,7 +161,7 @@ AudioOracleEx/fast:
 # Target rules for targets named AO
 
 # Build rule for target.
-AO: cmake_check_build_system
+AO:
 	$(MAKE) -f CMakeFiles/Makefile2 AO
 .PHONY : AO
 
@@ -137,23 +171,10 @@ AO/fast:
 .PHONY : AO/fast
 
 #=============================================================================
-# Target rules for targets named TestFOS
-
-# Build rule for target.
-TestFOS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestFOS
-.PHONY : TestFOS
-
-# fast build rule for target.
-TestFOS/fast:
-	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/build
-.PHONY : TestFOS/fast
-
-#=============================================================================
 # Target rules for targets named TestLCS
 
 # Build rule for target.
-TestLCS: cmake_check_build_system
+TestLCS:
 	$(MAKE) -f CMakeFiles/Makefile2 TestLCS
 .PHONY : TestLCS
 
@@ -166,7 +187,7 @@ TestLCS/fast:
 # Target rules for targets named TestAddLetter
 
 # Build rule for target.
-TestAddLetter: cmake_check_build_system
+TestAddLetter:
 	$(MAKE) -f CMakeFiles/Makefile2 TestAddLetter
 .PHONY : TestAddLetter
 
@@ -179,7 +200,7 @@ TestAddLetter/fast:
 # Target rules for targets named FO
 
 # Build rule for target.
-FO: cmake_check_build_system
+FO:
 	$(MAKE) -f CMakeFiles/Makefile2 FO
 .PHONY : FO
 
@@ -192,7 +213,7 @@ FO/fast:
 # Target rules for targets named FactorOracleString
 
 # Build rule for target.
-FactorOracleString: cmake_check_build_system
+FactorOracleString:
 	$(MAKE) -f CMakeFiles/Makefile2 FactorOracleString
 .PHONY : FactorOracleString
 
@@ -205,7 +226,7 @@ FactorOracleString/fast:
 # Target rules for targets named TestFindBetter
 
 # Build rule for target.
-TestFindBetter: cmake_check_build_system
+TestFindBetter:
 	$(MAKE) -f CMakeFiles/Makefile2 TestFindBetter
 .PHONY : TestFindBetter
 
@@ -214,273 +235,327 @@ TestFindBetter/fast:
 	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/build
 .PHONY : TestFindBetter/fast
 
-AudioOracle.o: AudioOracle.cpp.o
+src/AudioOracle.o: src/AudioOracle.cpp.o
 
-.PHONY : AudioOracle.o
-
-# target to build an object file
-AudioOracle.cpp.o:
-	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.o
-.PHONY : AudioOracle.cpp.o
-
-AudioOracle.i: AudioOracle.cpp.i
-
-.PHONY : AudioOracle.i
-
-# target to preprocess a source file
-AudioOracle.cpp.i:
-	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.i
-.PHONY : AudioOracle.cpp.i
-
-AudioOracle.s: AudioOracle.cpp.s
-
-.PHONY : AudioOracle.s
-
-# target to generate assembly for a file
-AudioOracle.cpp.s:
-	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/AudioOracle.cpp.s
-.PHONY : AudioOracle.cpp.s
-
-FactorOracle.o: FactorOracle.cpp.o
-
-.PHONY : FactorOracle.o
+.PHONY : src/AudioOracle.o
 
 # target to build an object file
-FactorOracle.cpp.o:
-	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/FactorOracle.cpp.o
-.PHONY : FactorOracle.cpp.o
+src/AudioOracle.cpp.o:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/src/AudioOracle.cpp.o
+.PHONY : src/AudioOracle.cpp.o
 
-FactorOracle.i: FactorOracle.cpp.i
+src/AudioOracle.i: src/AudioOracle.cpp.i
 
-.PHONY : FactorOracle.i
+.PHONY : src/AudioOracle.i
 
 # target to preprocess a source file
-FactorOracle.cpp.i:
-	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/FactorOracle.cpp.i
-.PHONY : FactorOracle.cpp.i
+src/AudioOracle.cpp.i:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/src/AudioOracle.cpp.i
+.PHONY : src/AudioOracle.cpp.i
 
-FactorOracle.s: FactorOracle.cpp.s
+src/AudioOracle.s: src/AudioOracle.cpp.s
 
-.PHONY : FactorOracle.s
+.PHONY : src/AudioOracle.s
 
 # target to generate assembly for a file
-FactorOracle.cpp.s:
-	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/FactorOracle.cpp.s
-.PHONY : FactorOracle.cpp.s
+src/AudioOracle.cpp.s:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/src/AudioOracle.cpp.s
+.PHONY : src/AudioOracle.cpp.s
 
-main.o: main.cpp.o
+src/Factor-Oracle/FactorOracle.o: src/Factor-Oracle/FactorOracle.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Factor-Oracle/FactorOracle.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Factor-Oracle/FactorOracle.cpp.o:
+	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/src/Factor-Oracle/FactorOracle.cpp.o
+.PHONY : src/Factor-Oracle/FactorOracle.cpp.o
 
-main.i: main.cpp.i
+src/Factor-Oracle/FactorOracle.i: src/Factor-Oracle/FactorOracle.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Factor-Oracle/FactorOracle.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Factor-Oracle/FactorOracle.cpp.i:
+	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/src/Factor-Oracle/FactorOracle.cpp.i
+.PHONY : src/Factor-Oracle/FactorOracle.cpp.i
 
-main.s: main.cpp.s
+src/Factor-Oracle/FactorOracle.s: src/Factor-Oracle/FactorOracle.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Factor-Oracle/FactorOracle.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Factor-Oracle/FactorOracle.cpp.s:
+	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/src/Factor-Oracle/FactorOracle.cpp.s
+.PHONY : src/Factor-Oracle/FactorOracle.cpp.s
 
-marsyas_play_file.o: marsyas_play_file.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : marsyas_play_file.o
+.PHONY : src/main.o
 
 # target to build an object file
-marsyas_play_file.cpp.o:
-	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.o
-.PHONY : marsyas_play_file.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-marsyas_play_file.i: marsyas_play_file.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : marsyas_play_file.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-marsyas_play_file.cpp.i:
-	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.i
-.PHONY : marsyas_play_file.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-marsyas_play_file.s: marsyas_play_file.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : marsyas_play_file.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-marsyas_play_file.cpp.s:
-	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/marsyas_play_file.cpp.s
-.PHONY : marsyas_play_file.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-test_add_letter.o: test_add_letter.cpp.o
+src/marsyas_play_file.o: src/marsyas_play_file.cpp.o
 
-.PHONY : test_add_letter.o
+.PHONY : src/marsyas_play_file.o
 
 # target to build an object file
-test_add_letter.cpp.o:
-	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.o
-.PHONY : test_add_letter.cpp.o
+src/marsyas_play_file.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o
+.PHONY : src/marsyas_play_file.cpp.o
 
-test_add_letter.i: test_add_letter.cpp.i
+src/marsyas_play_file.i: src/marsyas_play_file.cpp.i
 
-.PHONY : test_add_letter.i
+.PHONY : src/marsyas_play_file.i
 
 # target to preprocess a source file
-test_add_letter.cpp.i:
-	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.i
-.PHONY : test_add_letter.cpp.i
+src/marsyas_play_file.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.i
+.PHONY : src/marsyas_play_file.cpp.i
 
-test_add_letter.s: test_add_letter.cpp.s
+src/marsyas_play_file.s: src/marsyas_play_file.cpp.s
 
-.PHONY : test_add_letter.s
+.PHONY : src/marsyas_play_file.s
 
 # target to generate assembly for a file
-test_add_letter.cpp.s:
-	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/test_add_letter.cpp.s
-.PHONY : test_add_letter.cpp.s
+src/marsyas_play_file.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s
+.PHONY : src/marsyas_play_file.cpp.s
 
-test_find_better.o: test_find_better.cpp.o
+tests/Factor-Oracle/test_add_letter.o: tests/Factor-Oracle/test_add_letter.cpp.o
 
-.PHONY : test_find_better.o
+.PHONY : tests/Factor-Oracle/test_add_letter.o
 
 # target to build an object file
-test_find_better.cpp.o:
-	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/test_find_better.cpp.o
-.PHONY : test_find_better.cpp.o
+tests/Factor-Oracle/test_add_letter.cpp.o:
+	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.o
+.PHONY : tests/Factor-Oracle/test_add_letter.cpp.o
 
-test_find_better.i: test_find_better.cpp.i
+tests/Factor-Oracle/test_add_letter.i: tests/Factor-Oracle/test_add_letter.cpp.i
 
-.PHONY : test_find_better.i
+.PHONY : tests/Factor-Oracle/test_add_letter.i
 
 # target to preprocess a source file
-test_find_better.cpp.i:
-	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/test_find_better.cpp.i
-.PHONY : test_find_better.cpp.i
+tests/Factor-Oracle/test_add_letter.cpp.i:
+	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.i
+.PHONY : tests/Factor-Oracle/test_add_letter.cpp.i
 
-test_find_better.s: test_find_better.cpp.s
+tests/Factor-Oracle/test_add_letter.s: tests/Factor-Oracle/test_add_letter.cpp.s
 
-.PHONY : test_find_better.s
+.PHONY : tests/Factor-Oracle/test_add_letter.s
 
 # target to generate assembly for a file
-test_find_better.cpp.s:
-	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/test_find_better.cpp.s
-.PHONY : test_find_better.cpp.s
+tests/Factor-Oracle/test_add_letter.cpp.s:
+	$(MAKE) -f CMakeFiles/TestAddLetter.dir/build.make CMakeFiles/TestAddLetter.dir/tests/Factor-Oracle/test_add_letter.cpp.s
+.PHONY : tests/Factor-Oracle/test_add_letter.cpp.s
 
-test_fos.o: test_fos.cpp.o
+tests/Factor-Oracle/test_find_better.o: tests/Factor-Oracle/test_find_better.cpp.o
 
-.PHONY : test_fos.o
+.PHONY : tests/Factor-Oracle/test_find_better.o
 
 # target to build an object file
-test_fos.cpp.o:
-	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/test_fos.cpp.o
-.PHONY : test_fos.cpp.o
+tests/Factor-Oracle/test_find_better.cpp.o:
+	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.o
+.PHONY : tests/Factor-Oracle/test_find_better.cpp.o
 
-test_fos.i: test_fos.cpp.i
+tests/Factor-Oracle/test_find_better.i: tests/Factor-Oracle/test_find_better.cpp.i
 
-.PHONY : test_fos.i
+.PHONY : tests/Factor-Oracle/test_find_better.i
 
 # target to preprocess a source file
-test_fos.cpp.i:
-	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/test_fos.cpp.i
-.PHONY : test_fos.cpp.i
+tests/Factor-Oracle/test_find_better.cpp.i:
+	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.i
+.PHONY : tests/Factor-Oracle/test_find_better.cpp.i
 
-test_fos.s: test_fos.cpp.s
+tests/Factor-Oracle/test_find_better.s: tests/Factor-Oracle/test_find_better.cpp.s
 
-.PHONY : test_fos.s
+.PHONY : tests/Factor-Oracle/test_find_better.s
 
 # target to generate assembly for a file
-test_fos.cpp.s:
-	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/test_fos.cpp.s
-.PHONY : test_fos.cpp.s
+tests/Factor-Oracle/test_find_better.cpp.s:
+	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/tests/Factor-Oracle/test_find_better.cpp.s
+.PHONY : tests/Factor-Oracle/test_find_better.cpp.s
 
-test_lcs.o: test_lcs.cpp.o
+tests/Factor-Oracle/test_fos.o: tests/Factor-Oracle/test_fos.cpp.o
 
-.PHONY : test_lcs.o
+.PHONY : tests/Factor-Oracle/test_fos.o
 
 # target to build an object file
-test_lcs.cpp.o:
-	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/test_lcs.cpp.o
-.PHONY : test_lcs.cpp.o
+tests/Factor-Oracle/test_fos.cpp.o:
+	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.o
+.PHONY : tests/Factor-Oracle/test_fos.cpp.o
 
-test_lcs.i: test_lcs.cpp.i
+tests/Factor-Oracle/test_fos.i: tests/Factor-Oracle/test_fos.cpp.i
 
-.PHONY : test_lcs.i
+.PHONY : tests/Factor-Oracle/test_fos.i
 
 # target to preprocess a source file
-test_lcs.cpp.i:
-	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/test_lcs.cpp.i
-.PHONY : test_lcs.cpp.i
+tests/Factor-Oracle/test_fos.cpp.i:
+	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.i
+.PHONY : tests/Factor-Oracle/test_fos.cpp.i
 
-test_lcs.s: test_lcs.cpp.s
+tests/Factor-Oracle/test_fos.s: tests/Factor-Oracle/test_fos.cpp.s
 
-.PHONY : test_lcs.s
+.PHONY : tests/Factor-Oracle/test_fos.s
 
 # target to generate assembly for a file
-test_lcs.cpp.s:
-	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/test_lcs.cpp.s
-.PHONY : test_lcs.cpp.s
+tests/Factor-Oracle/test_fos.cpp.s:
+	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/tests/Factor-Oracle/test_fos.cpp.s
+.PHONY : tests/Factor-Oracle/test_fos.cpp.s
+
+tests/Factor-Oracle/test_lcs.o: tests/Factor-Oracle/test_lcs.cpp.o
+
+.PHONY : tests/Factor-Oracle/test_lcs.o
+
+# target to build an object file
+tests/Factor-Oracle/test_lcs.cpp.o:
+	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.o
+.PHONY : tests/Factor-Oracle/test_lcs.cpp.o
+
+tests/Factor-Oracle/test_lcs.i: tests/Factor-Oracle/test_lcs.cpp.i
+
+.PHONY : tests/Factor-Oracle/test_lcs.i
+
+# target to preprocess a source file
+tests/Factor-Oracle/test_lcs.cpp.i:
+	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.i
+.PHONY : tests/Factor-Oracle/test_lcs.cpp.i
+
+tests/Factor-Oracle/test_lcs.s: tests/Factor-Oracle/test_lcs.cpp.s
+
+.PHONY : tests/Factor-Oracle/test_lcs.s
+
+# target to generate assembly for a file
+tests/Factor-Oracle/test_lcs.cpp.s:
+	$(MAKE) -f CMakeFiles/TestLCS.dir/build.make CMakeFiles/TestLCS.dir/tests/Factor-Oracle/test_lcs.cpp.s
+.PHONY : tests/Factor-Oracle/test_lcs.cpp.s
+
+tests/marsyas_output.o: tests/marsyas_output.cpp.o
+
+.PHONY : tests/marsyas_output.o
+
+# target to build an object file
+tests/marsyas_output.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleOutput.dir/build.make CMakeFiles/AudioOracleOutput.dir/tests/marsyas_output.cpp.o
+.PHONY : tests/marsyas_output.cpp.o
+
+tests/marsyas_output.i: tests/marsyas_output.cpp.i
+
+.PHONY : tests/marsyas_output.i
+
+# target to preprocess a source file
+tests/marsyas_output.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleOutput.dir/build.make CMakeFiles/AudioOracleOutput.dir/tests/marsyas_output.cpp.i
+.PHONY : tests/marsyas_output.cpp.i
+
+tests/marsyas_output.s: tests/marsyas_output.cpp.s
+
+.PHONY : tests/marsyas_output.s
+
+# target to generate assembly for a file
+tests/marsyas_output.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleOutput.dir/build.make CMakeFiles/AudioOracleOutput.dir/tests/marsyas_output.cpp.s
+.PHONY : tests/marsyas_output.cpp.s
+
+tests/rearrange_audio.o: tests/rearrange_audio.cpp.o
+
+.PHONY : tests/rearrange_audio.o
+
+# target to build an object file
+tests/rearrange_audio.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioRearrange.dir/build.make CMakeFiles/AudioRearrange.dir/tests/rearrange_audio.cpp.o
+.PHONY : tests/rearrange_audio.cpp.o
+
+tests/rearrange_audio.i: tests/rearrange_audio.cpp.i
+
+.PHONY : tests/rearrange_audio.i
+
+# target to preprocess a source file
+tests/rearrange_audio.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioRearrange.dir/build.make CMakeFiles/AudioRearrange.dir/tests/rearrange_audio.cpp.i
+.PHONY : tests/rearrange_audio.cpp.i
+
+tests/rearrange_audio.s: tests/rearrange_audio.cpp.s
+
+.PHONY : tests/rearrange_audio.s
+
+# target to generate assembly for a file
+tests/rearrange_audio.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioRearrange.dir/build.make CMakeFiles/AudioRearrange.dir/tests/rearrange_audio.cpp.s
+.PHONY : tests/rearrange_audio.cpp.s
 
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
-	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... AudioOracleOutput"
+	@echo "... TestFOS"
+	@echo "... AudioRearrange"
+	@echo "... edit_cache"
 	@echo "... AudioOracleEx"
 	@echo "... AO"
-	@echo "... edit_cache"
-	@echo "... TestFOS"
-	@echo "... rebuild_cache"
 	@echo "... TestLCS"
 	@echo "... TestAddLetter"
 	@echo "... FO"
 	@echo "... FactorOracleString"
 	@echo "... TestFindBetter"
-	@echo "... AudioOracle.o"
-	@echo "... AudioOracle.i"
-	@echo "... AudioOracle.s"
-	@echo "... FactorOracle.o"
-	@echo "... FactorOracle.i"
-	@echo "... FactorOracle.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... marsyas_play_file.o"
-	@echo "... marsyas_play_file.i"
-	@echo "... marsyas_play_file.s"
-	@echo "... test_add_letter.o"
-	@echo "... test_add_letter.i"
-	@echo "... test_add_letter.s"
-	@echo "... test_find_better.o"
-	@echo "... test_find_better.i"
-	@echo "... test_find_better.s"
-	@echo "... test_fos.o"
-	@echo "... test_fos.i"
-	@echo "... test_fos.s"
-	@echo "... test_lcs.o"
-	@echo "... test_lcs.i"
-	@echo "... test_lcs.s"
+	@echo "... src/AudioOracle.o"
+	@echo "... src/AudioOracle.i"
+	@echo "... src/AudioOracle.s"
+	@echo "... src/Factor-Oracle/FactorOracle.o"
+	@echo "... src/Factor-Oracle/FactorOracle.i"
+	@echo "... src/Factor-Oracle/FactorOracle.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/marsyas_play_file.o"
+	@echo "... src/marsyas_play_file.i"
+	@echo "... src/marsyas_play_file.s"
+	@echo "... tests/Factor-Oracle/test_add_letter.o"
+	@echo "... tests/Factor-Oracle/test_add_letter.i"
+	@echo "... tests/Factor-Oracle/test_add_letter.s"
+	@echo "... tests/Factor-Oracle/test_find_better.o"
+	@echo "... tests/Factor-Oracle/test_find_better.i"
+	@echo "... tests/Factor-Oracle/test_find_better.s"
+	@echo "... tests/Factor-Oracle/test_fos.o"
+	@echo "... tests/Factor-Oracle/test_fos.i"
+	@echo "... tests/Factor-Oracle/test_fos.s"
+	@echo "... tests/Factor-Oracle/test_lcs.o"
+	@echo "... tests/Factor-Oracle/test_lcs.i"
+	@echo "... tests/Factor-Oracle/test_lcs.s"
+	@echo "... tests/marsyas_output.o"
+	@echo "... tests/marsyas_output.i"
+	@echo "... tests/marsyas_output.s"
+	@echo "... tests/rearrange_audio.o"
+	@echo "... tests/rearrange_audio.i"
+	@echo "... tests/rearrange_audio.s"
 .PHONY : help
 
 
 
 #=============================================================================
 # Special targets to cleanup operation of make.
-
-# Special rule to run CMake to check the build system integrity.
-# No rule that depends on this can have commands that come from listfiles
-# because they might be regenerated.
-cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-.PHONY : cmake_check_build_system
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FactorOracleString.dir/main.cpp.o"
+  "CMakeFiles/FactorOracleString.dir/src/main.cpp.o"
   "FactorOracleString"
   "FactorOracleString.pdb"
 )

@@ -57,27 +57,27 @@ include CMakeFiles/AO.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AO.dir/flags.make
 
-CMakeFiles/AO.dir/AudioOracle.cpp.o: CMakeFiles/AO.dir/flags.make
-CMakeFiles/AO.dir/AudioOracle.cpp.o: ../AudioOracle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AO.dir/AudioOracle.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AO.dir/AudioOracle.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.cpp
+CMakeFiles/AO.dir/src/AudioOracle.cpp.o: CMakeFiles/AO.dir/flags.make
+CMakeFiles/AO.dir/src/AudioOracle.cpp.o: ../src/AudioOracle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AO.dir/src/AudioOracle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AO.dir/src/AudioOracle.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.cpp
 
-CMakeFiles/AO.dir/AudioOracle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AO.dir/AudioOracle.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.cpp > CMakeFiles/AO.dir/AudioOracle.cpp.i
+CMakeFiles/AO.dir/src/AudioOracle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AO.dir/src/AudioOracle.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.cpp > CMakeFiles/AO.dir/src/AudioOracle.cpp.i
 
-CMakeFiles/AO.dir/AudioOracle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AO.dir/AudioOracle.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/AudioOracle.cpp -o CMakeFiles/AO.dir/AudioOracle.cpp.s
+CMakeFiles/AO.dir/src/AudioOracle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AO.dir/src/AudioOracle.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.cpp -o CMakeFiles/AO.dir/src/AudioOracle.cpp.s
 
 # Object files for target AO
 AO_OBJECTS = \
-"CMakeFiles/AO.dir/AudioOracle.cpp.o"
+"CMakeFiles/AO.dir/src/AudioOracle.cpp.o"
 
 # External object files for target AO
 AO_EXTERNAL_OBJECTS =
 
-libAO.a: CMakeFiles/AO.dir/AudioOracle.cpp.o
+libAO.a: CMakeFiles/AO.dir/src/AudioOracle.cpp.o
 libAO.a: CMakeFiles/AO.dir/build.make
 libAO.a: CMakeFiles/AO.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAO.a"
