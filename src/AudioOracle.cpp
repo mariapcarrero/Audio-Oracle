@@ -9,30 +9,26 @@
 #include "AudioOracle.h"
 #include <marsyas/system/MarSystem.h>
 #include <marsyas/system/MarSystemManager.h>
+#include <portaudio.h>
 #include "../3rd-party/AudioFile.h"
-
 
 #include <cmath>
 int pi_1, pi_2, k, fo_iter;
 
-double vectorDistance(double *first, double* last, double *first2) {
+double AudioOracle::VectorDistance(double *first, double* last, double *first2) {
     double ret = 0.0;
-  //  cout << "inside function: " << *first << " " << *last << " " << *first2 << endl;
     while (first != last) {
         double dist = (*first++) - (*first2++);
         ret += dist * dist;
     }
-   // cout << "sqrt: " << sqrt(ret) << " ret: " << ret << endl;
     return ret > 0.0 ? sqrt(ret) : 0.0;
 }
 
 vector<double> AudioOracle::MakeWindow(int n)
 {
     vector<double> window;
-    for(int i = 0; i < n; i++)
-    {
-        window.push_back((0.5 * (1 - cos(2*M_PI*i/(n-1))))+ 0.00001);
-    }
+    window.reserve(n);
+    for(int i = 0; i < n; i++) window.push_back((0.5 * (1 - cos(2*M_PI*i/(n-1))))+ 0.00001);
     return window;
 }
 
@@ -47,20 +43,14 @@ vector<int> AudioOracle::AOGenerate(int i, int total_length, float q, int k)
     */
     vector<int> improvisation_vector;
     int iter = 0;
-    int j = 0;
-    int w = 0;
-    int j_temp = 0;
     for(iter = 0; iter < total_length; iter++)
     {
         std::random_device rd;  //Will be used to obtain a seed for the random number engine
         std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
         std::uniform_real_distribution<> dis(0.0, 1.0);
         float u = dis(gen);
-        //cout << "u: " << u << endl;
-        // float u = (float)rand() / RAND_MAX;
         if (this->states_.size() == 2) {
             improvisation_vector.push_back(this->states_[0].state_);
-
         } else {
             if (u < q) //Preguntar si debe iniciar en 1 o en 0
             {
@@ -74,9 +64,8 @@ vector<int> AudioOracle::AOGenerate(int i, int total_length, float q, int k)
                     improvisation_vector.push_back(this->states_[i].transition_[0].last_state_);
                 }
                 i++;
-                //string s(1,w);
-                //v = v + s;
             } else {
+                if(i == states_.size()) i = i - 1;
                 int lenSuffix = this->states_[this->states_[i].suffix_transition_].transition_.size() - 1;
                 int rand_alpha = 0;
                 if (lenSuffix == -1)
@@ -91,37 +80,24 @@ vector<int> AudioOracle::AOGenerate(int i, int total_length, float q, int k)
                     rand_alpha = dis_int(gen);
                     improvisation_vector.push_back(this->states_[this->states_[i].suffix_transition_].transition_[rand_alpha].last_state_);
                 }
-                /*std::random_device rd;  //Will be used to obtain a seed for the random number engine
-                std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
-                std::uniform_int_distribution<> dis_int(0, lenSuffix);
-                int rand_alpha = dis_int(gen);*/
-
-               // j = this->states_[this->states_[i].suffix_transition_].transition_[rand_alpha].starting_frame_;
-
                 i = this->states_[this->states_[i].suffix_transition_].transition_[rand_alpha].last_state_;
-                if (i == -1) {
-                    i = 0;
-                }
+                if (i == -1) i = 0;
             }
         }
     }
-  //  cout << improvisation_vector.size() << endl;
     return improvisation_vector;
 };
 
 void AudioOracle::GenerateAudio(int i, int total_length, float q, int k, int hop_size, int buffer_size, string input_filename, string output_filename)
 {
-
     AudioFile<double> audioFile;
     audioFile.load(input_filename);
-
     AudioFile<double>::AudioBuffer buffer;
-
+    AudioFile<double>::AudioBuffer window_buffer;
     AudioFile<double>::AudioBuffer complete_buffer;
     int automaton_size = this->states_.size();
     cout << automaton_size << endl;
     int numSamples = audioFile.getNumSamplesPerChannel();
-    //int repetitions = total_length * hop_size;
     int repetitions = (automaton_size * hop_size);
     int numChannels = audioFile.getNumChannels();
     int j = 0;
@@ -152,7 +128,8 @@ void AudioOracle::GenerateAudio(int i, int total_length, float q, int k, int hop
     cout << endl;
     // 2. Set to (e.g.) two channels
     buffer.resize(2);
-    repetitions = (total_length * buffer_size);
+   // repetitions = (total_length * buffer_size);
+    repetitions = (total_length * hop_size);
     // 3. Set number of samples per channel
     buffer[0].resize(repetitions);
     buffer[1].resize(repetitions);
@@ -160,9 +137,14 @@ void AudioOracle::GenerateAudio(int i, int total_length, float q, int k, int hop
     // 2. Set to (e.g.) two channels
     complete_buffer.resize(2);
 
+
     // 3. Set number of samples per channel
     complete_buffer[0].resize(repetitions);
     complete_buffer[1].resize(repetitions);
+
+    window_buffer.resize(2);
+    window_buffer[0].resize(repetitions);
+    window_buffer[1].resize(repetitions);
 
     vector<double> win = MakeWindow(buffer_size);
     cout << "win: " << endl;
@@ -174,75 +156,136 @@ void AudioOracle::GenerateAudio(int i, int total_length, float q, int k, int hop
     int w = 0;
    // int z = 0;
     int real_iter = 0;
+    repetitions = (total_length * hop_size);
     while (iter < repetitions) {
         //z = this->states_[improvisation[real_iter]].starting_frame_;
-
        for(int z = 0; z < buffer_size; z++)
        {
             for (int channel = 0; channel < numChannels; channel++)
-                buffer[channel][iter] = (buffer_matrix[improvisation[real_iter]][z] * win[z]) + 0.00001;
+                buffer[channel][iter] = buffer[channel][iter] + (buffer_matrix[improvisation[real_iter]][z] * win[z]) + 0.00001;
             iter++;
         }
-        real_iter++;
+        if (iter < repetitions){
+            iter = iter - (hop_size);
+            real_iter++;
+        }
     }
+    iter = 0;
+
+
+    while (iter < repetitions) {
+        //z = this->states_[improvisation[real_iter]].starting_frame_;
+
+        for(int z = 0; z < buffer_size; z++)
+        {
+            for (int channel = 0; channel < numChannels; channel++)
+                window_buffer[channel][iter] = window_buffer[channel][iter] + win[z];
+            iter++;
+        }
+        if (iter < repetitions){
+            iter = iter - (hop_size);
+        }
+    }
+    iter = 0;
+    while (iter < repetitions) {
+        //z = this->states_[improvisation[real_iter]].starting_frame_;
+
+        for(int z = 0; z < buffer_size; z++)
+        {
+            for (int channel = 0; channel < numChannels; channel++)
+                buffer[channel][iter] = buffer[channel][iter]/window_buffer[channel][iter];
+            iter++;
+        }
+    }
+
     bool ok = audioFile.setAudioBuffer (buffer);
-    audioFile.setSampleRate (44100);
+   // audioFile.setSampleRate (44100);
     cout << ok << endl;
     audioFile.save (output_filename, AudioFileFormat::Wave);
 }
 
 
-void AudioOracle::AnalyseAudio(string sfName, int hop_size)
+void AudioOracle::AnalyseAudio(string sfName, int hop_size, string feature)
 {
-    cout << sfName << endl;
     Marsyas::MarSystemManager mng;
     Marsyas::MarSystem* pnet = mng.create("Series", "pnet");
-    // standard network
     pnet->addMarSystem(mng.create("SoundFileSource", "src"));
-    pnet->updctrl("SoundFileSource/src/mrs_string/filename", sfName);
-    pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
-    pnet->addMarSystem(mng.create("Centroid","cntd"));
-    pnet->addMarSystem(mng.create("Gain", "gain"));
-    pnet->addMarSystem(mng.create("Windowing/ham"));
-    pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+    pnet->updControl("SoundFileSource/src/mrs_string/filename", sfName);
     pnet->updControl("mrs_natural/inSamples", hop_size);
-    int counter = 0;
-    this->CreateState(0);
-    this->states_[0].state_ = 0;
-    this->states_[0].lrs_ = 0;
-    this->states_[0].suffix_transition_ = -1;
-    this->states_[0].starting_frame_ = 0;
-    this->T.push_back({});
+    this->AddInitialTransition();
     int i = 0;
     vector <vector <double>> vector_real;
-    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    if(feature == "centroid")
     {
-        cout << "sample: " << pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>() << endl;
-        pnet->tick();
-        // gets data from the Spectrum for read only!
-        //const realvec& processedData =
-        //       pnet->getctrl("Spectrum/spk/mrs_realvec/processedData")->to<mrs_realvec>();
-        const Marsyas::realvec& processedData =
-                pnet->getctrl("Centroid/cntd/mrs_realvec/processedData")->to<mrs_realvec>();
-       // cout << "Original Spectrum = " << processedData << endl;
-        Marsyas::mrs_real * real_pointer;
-        real_pointer = processedData.getData();
-        //cout << "val pointer: "<< *real_pointer << endl;
-        vector <Marsyas::mrs_real> temp_vector;
-        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ )
-        {
-            temp_vector.push_back(*(real_pointer+temp_counter));
-        }
-
-        double * map_pointer = &(temp_vector[0]);
-        this->feature_map.insert({counter, map_pointer});
-        this->AddFrame(counter, temp_vector, 9.65 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
-        counter = counter +1;
-        // if we need to get the Spectrum and modify it, here is the way
-        // to do it.  Notice that we must open a new scope using curly
-        // brackets so that MarControlAccessor is automatically destroyed
-        // when we are finished modifing the realvec control.
+        cout << "centroid" << endl;
+        pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("Centroid","cntd"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+     //   pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->CentroidFeatureExtraction(pnet,hop_size,feature);
     }
+    if(feature == "spectrum")
+    {
+        cout << "spectrum" << endl;
+        pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("Spectrum","spk"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+        pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->SpectrumFeatureExtraction(pnet,hop_size,feature);
+    }
+    if(feature == "mfcc")
+    {
+        cout << "mfcc" << endl;
+        pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("MFCC","mfcc"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+        pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->MFCCFeatureExtraction(pnet,hop_size,feature);
+    }
+    if(feature == "chroma")
+    {
+        cout << "chroma" << endl;
+        pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("Chroma","chrm"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+      //  pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->ChromaFeatureExtraction(pnet,hop_size,feature);
+    }
+    if(feature == "rms")
+    {
+        cout << "rms" << endl;
+       // pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("Rms","rms"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+        // pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->RootMeanSquareFeatureExtraction(pnet,hop_size,feature);
+    }
+    if(feature == "zeroCrossings")
+    {
+        cout << "zero crossings" << endl;
+       // pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("ZeroCrossings","zcs"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+       // pnet->addMarSystem(mng.create("Windowing/ham"));
+        pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+        this->ZeroCrossingsFeatureExtraction(pnet,hop_size,feature);
+    }
+    if(feature == "rolloff")
+    {
+        cout << "rolloff" << endl;
+        pnet->addMarSystem(mng.create("PowerSpectrum/pspk"));
+        pnet->addMarSystem(mng.create("Gain", "gain"));
+        pnet->addMarSystem(mng.create("Windowing/ham"));
+        pnet->addMarSystem(mng.create("Rolloff/rolloff"));
+
+        this->RolloffFeatureExtraction(pnet,hop_size,feature);
+    }
+    int counter = this->states_.size();
     cout << "COUNTER IS:" << counter << endl;
     for (int w = 0; w < counter; w++)
     {
@@ -272,8 +315,10 @@ void AudioOracle::AnalyseAudio(string sfName, int hop_size)
     delete pnet;
 }
 
-void AudioOracle::AddState(int first_state){
-    this->states_[first_state].state_ = first_state;
+void AudioOracle::AddState(int first_state, int state, int start_frame){
+    this->states_[first_state].suffix_transition_ = state;
+    this->states_[first_state].lrs_ = state;
+    this->states_[first_state].starting_frame_ = start_frame;
 }
 
 
@@ -292,52 +337,238 @@ void AudioOracle::AddTransition(int first_state, int last_state, vector <Marsyas
     transition_i.starting_frame_ = starting_frame;
     this->states_[first_state].transition_.push_back(transition_i);
 }
-/*
-string AudioOracle::FOGenerate( int& i, string v, float q)
+
+void AudioOracle::AddInitialTransition()
 {
-    //! A normal member taking four arguments and returning a string value.
-    /*!
-      \param i an integer argument.
-      \param v a string argument.
-      \param q a float argument.
-      \return The factor oracle improvisation
-    */
+    this->CreateState(0);
+    this->states_[0].state_ = 0;
+    this->states_[0].lrs_ = 0;
+    this->states_[0].suffix_transition_ = -1;
+    this->states_[0].starting_frame_ = 0;
+    this->T.push_back({});
+}
+
+void AudioOracle::CentroidFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    cout << "INSIDE CENTROID " << endl;
+
+    cout << endl;
+   // cout << "realp: " << *real_pointer << endl;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData = pnet->getctrl("Centroid/cntd/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        vector <Marsyas::mrs_real> temp_vector;
+        temp_vector.reserve(hop_size);
+/*        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;*/
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 15 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+    }
+}
+
 /*
-    std::random_device rd;  ///Will be used to obtain a seed for the random number engine
-    std::mt19937 gen(rd()); ///Standard mersenne_twister_engine seeded with rd()
-    std::uniform_real_distribution<> dis(0.0, 1.0);
-    float u = dis(gen);
-    /// float u = (float)rand() / RAND_MAX;
-    if (u < q) //Preguntar si debe iniciar en 1 o en 0
+
+void AudioOracle::CentroidFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    cout << "INSIDE CENTROID " << endl;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
     {
-        i = state_i_plus_one;
-        int len = this->states_.size();
-        if (i == len)
-            i = len - 1;
-        char w = this->states_[i].transition_[0].vector_real_;
-        string s(1,w);
-        v = v + s;
+        pnet->tick();
+        const realvec& processedData = pnet->getctrl("Centroid/cntd/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        vector <Marsyas::mrs_real> temp_vector;
+        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 15 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
     }
-    else
-    {
-        int lenSuffix = this->states_[this->states_[i].suffix_transition_].transition_.size() - 1;
-        std::random_device rd;  ///Will be used to obtain a seed for the random number engine
-        std::mt19937 gen(rd()); ///Standard mersenne_twister_engine seeded with rd()
-        std::uniform_int_distribution<> dis_int(0, lenSuffix);
-        int rand_alpha = dis_int(gen);
-        char alpha = this->states_[this->states_[i].suffix_transition_].transition_[rand_alpha].vector_real_;
-        i = this->states_[this->states_[i].suffix_transition_].transition_[rand_alpha].last_state_;
-        if (i == -1)
-        {
-            i = 0;
-        }
-        v = v + alpha;
-    }
-    return v;
 }
 */
 
+void AudioOracle::ChromaFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    cout << "INSIDE CHROMA " << endl;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData = pnet->getctrl("Chroma/chrm/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        vector <Marsyas::mrs_real> temp_vector;
+        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 0.3 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+    }
+}
 
+void AudioOracle::RolloffFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    cout << "INSIDE ROLLOFF " << endl;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const auto& processedData = pnet->getctrl("Rolloff/rolloff/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        vector <Marsyas::mrs_real> temp_vector;
+        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 0.3 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+    }
+}
+void AudioOracle::SpectrumFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        // gets data from the Spectrum for read only!
+        const realvec& processedData =
+               pnet->getctrl("Spectrum/spk/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        //cout << "val pointer: "<< *real_pointer << endl;
+        cout << "realp: " << *real_pointer << endl;
+        vector <Marsyas::mrs_real> temp_vector;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 9.65 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+        // if we need to get the Spectrum and modify it, here is the way
+        // to do it.  Notice that we must open a new scope using curly
+        // brackets so that MarControlAccessor is automatically destroyed
+        // when we are finished modifing the realvec control.
+    }
+}
+
+void AudioOracle::PowerSpectrumFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData =
+                pnet->getctrl("PowerSpectrum/pspk/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        vector <Marsyas::mrs_real> temp_vector;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 9.65 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+    }
+}
+
+void AudioOracle::MFCCFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData =
+                pnet->getctrl("MFCC/mfcc/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;
+        vector <Marsyas::mrs_real> temp_vector;
+        for (int temp_counter = 0; temp_counter < hop_size; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 0.2 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), hop_size);
+        counter = counter +1;
+    }
+}
+
+void AudioOracle::RootMeanSquareFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    int counter = 0;
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData =
+                pnet->getctrl("Rms/rms/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+/*        cout << "realvec: ";
+        for (int i = 0; i< hop_size; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;*/
+        vector <Marsyas::mrs_real> temp_vector;
+        for (int temp_counter = 0; temp_counter < 2; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 0.05 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), 2);
+        counter = counter +1;
+    }
+}
+
+void AudioOracle::ZeroCrossingsFeatureExtraction(MarSystem *pnet, int hop_size, string feature)
+{
+    vector <vector <double>> vector_real;
+    int counter = 0;
+
+    while ( pnet->getctrl("SoundFileSource/src/mrs_bool/hasData")->to<mrs_bool>() )
+    {
+        pnet->tick();
+        const realvec& processedData =
+                pnet->getctrl("ZeroCrossings/zcs/mrs_realvec/processedData")->to<mrs_realvec>();
+        Marsyas::mrs_real * real_pointer;
+        real_pointer = processedData.getData();
+        cout << "realvec: ";
+        for (int i = 0; i< 2; i++) cout << *(real_pointer + i) << " ";
+        cout << endl;
+        cout << "realp: " << *real_pointer << endl;
+        vector <Marsyas::mrs_real> temp_vector;
+        for (int temp_counter = 0; temp_counter < 2; temp_counter ++ ) temp_vector.push_back(*(real_pointer+temp_counter));
+        double * map_pointer = &(temp_vector[0]);
+        this->feature_map.insert({counter, map_pointer});
+        this->AddFrame(counter, temp_vector, 0.02 , pnet->getctrl("SoundFileSource/src/mrs_natural/pos")->to<mrs_natural>(), 2 );
+        counter = counter +1;
+        cout << "starting: " << this->states_[counter].starting_frame_ << endl;
+    }
+}
 void AudioOracle::FindBetter(int state_i_plus_one, double threshold, vector <mrs_real> vector_real)
 {
     //! A normal member taking five arguments and returning an integer value.
@@ -356,7 +587,7 @@ void AudioOracle::FindBetter(int state_i_plus_one, double threshold, vector <mrs
         double *v1_pointer = &(vector_real[0]);
         double *v2_pointer = &(this->states_[k].transition_[iter].vector_real_[0]);
        // cout << "inside lst: " << *v1_pointer << " " << *v2_pointer << endl;
-        double euclidean_result = vectorDistance(v1_pointer, (v1_pointer + 4095), v2_pointer);
+        double euclidean_result = VectorDistance(v1_pointer, (v1_pointer + 4095), v2_pointer);
        // cout << "euc result1: " << euclidean_result << endl;
         if (euclidean_result < threshold) {
           //  cout << "inside euc res " << endl;
@@ -378,27 +609,20 @@ void AudioOracle::FindBetter(int state_i_plus_one, double threshold, vector <mrs
     for (int w = 0; w < filtered_transitions.size(); w++)
     {
         this->states_[state_i_plus_one].suffix_transition_ = filtered_transitions[w].current_transition_.last_state_; //preguntar a jaime
-     //   cout << "last: " <<  filtered_transitions[w].current_transition_.last_state_ << endl;
         this->T[filtered_transitions[w].current_transition_.last_state_].push_back(state_i_plus_one);
     }
 
 }
 int AudioOracle::LengthCommonSuffix( int pi_1, int pi_2)
 {
-    if (pi_2 == this->states_[pi_1].suffix_transition_)
-    {
-    //    cout << "pi_2 == pi_1: " << endl << pi_2 << this->states_[pi_1].suffix_transition_ << this->states_[pi_1].lrs_ << endl;
-       return this->states_[pi_1].lrs_;
-    }
+    if (pi_2 == this->states_[pi_1].suffix_transition_) return this->states_[pi_1].lrs_;
     else
     {
-        while (this->states_[pi_1].suffix_transition_ != this->states_[pi_2].suffix_transition_)
-        {
-            pi_2 = this->states_[pi_2].suffix_transition_;
-        }
+        while (this->states_[pi_1].suffix_transition_ != this->states_[pi_2].suffix_transition_) pi_2 = this->states_[pi_2].suffix_transition_;
     }
     return min(this->states_[pi_1].lrs_,this->states_[pi_2].lrs_) + 1;
 }
+
 void AudioOracle::AddFrame(int i, vector <mrs_real> vector_real, double threshold, int start_frame, int hop_size) {
     //! A normal member taking four arguments and returning no value.
     /*!
@@ -406,36 +630,30 @@ void AudioOracle::AddFrame(int i, vector <mrs_real> vector_real, double threshol
       \param vector_real a vector of mrs_real (aka double) values.
       \param threshold a double value which determines the level of similarity between vectors.
     */
-    //char alpha = word[i-1];
     cout << "inside AddFrame, state: " << i << endl;
     this->CreateState(i + 1);
     int state_i_plus_one = i + 1;
-    this->T.push_back({});
+    this->T.emplace_back();
     this->AddTransition(i, state_i_plus_one, vector_real,i,(state_i_plus_one + 1) * hop_size);
-    k = this->states_[i].suffix_transition_; /*!< k = S[i] */
-    this->states_[state_i_plus_one].suffix_transition_ = 0;
+    k = this->states_[i].suffix_transition_; // < k = S[i]
+    this->AddState(state_i_plus_one, 0, start_frame);
+/*    this->states_[state_i_plus_one].suffix_transition_ = 0;
     this->states_[state_i_plus_one].lrs_ = 0;
-    this->states_[state_i_plus_one].starting_frame_ = start_frame;
-    pi_1 = i; /*!< phi_one = i */
+    this->states_[state_i_plus_one].starting_frame_ = start_frame;*/
+    pi_1 = i; //<  phi_one = i
     int flag = 0, iter = 0, counter = 0, s;
     while (k > -1 && flag == 0) {
-       // cout << "entro k > -1" << endl;
         iter = 0;
-
         while (iter < this->states_[k].transition_.size() && k > -1) {
             double *v2_pointer = &(this->states_[k].transition_[iter].vector_real_[0]);
             double *v1_pointer = &(vector_real[0]);
             iter++;
-            double euclidean_result = vectorDistance(v1_pointer, (v1_pointer + 4095), v2_pointer);
-           // cout << "euc result: " << euclidean_result << endl;
+            double euclidean_result = VectorDistance(v1_pointer, (v1_pointer + (hop_size-1)), v2_pointer);
+            cout << "eucr: " << euclidean_result << endl;
             if (euclidean_result < threshold) {
                 AddTransition(k, state_i_plus_one, vector_real,i,(state_i_plus_one + 1) * hop_size);
-               // cout << this->states_[k].transition_[1].last_state_ << endl;
-             //   cout << "k: " << k << endl;
                 pi_1 = k;
                 k = this->states_[k].suffix_transition_;
-              //  cout << "k after: " << k << endl;
-               // cout << "entro" << k << endl;
             }
             if (iter >= this->states_[k].transition_.size())
                 flag = 1;
@@ -446,35 +664,28 @@ void AudioOracle::AddFrame(int i, vector <mrs_real> vector_real, double threshol
         }
     }
     if (k == -1) {
-        /* this->states_[statemplusone].suffix_transition_ = 0;
-         this->states_[statemplusone].lrs_ = 0;*/
-       // cout << "entro a  k == -1 " << endl;
+
         this->states_[state_i_plus_one].suffix_transition_ = 0;
         this->states_[state_i_plus_one].lrs_ = 0;
     }
     else {
-       // FindBetter(state_i_plus_one,threshold,vector_real);
-        s = 0;
+        FindBetter(vector_real,state_i_plus_one,hop_size);
+        /*s = 0;
         flag = 0, iter = 0;
         double min_distance = INFINITY;
+        cout << "INSIDE FINDBETTER" << endl;
         while (iter < this->states_[k].transition_.size()) {
-
             double *v1_pointer = &(vector_real[0]);
             double *v2_pointer = &(this->states_[k].transition_[iter].vector_real_[0]);
-            //cout << "inside last: " << *v1_pointer << " " << *v2_pointer << endl;
-            double euclidean_result = vectorDistance(v1_pointer, (v1_pointer + 4095), v2_pointer);
-
+            double euclidean_result = VectorDistance(v1_pointer, (v1_pointer + (hop_size-1)), v2_pointer);
             if (euclidean_result < min_distance) {
                 s = this->states_[k].transition_[iter].last_state_;
-             //   cout << "s prev: " << s << " k: " << k << endl;
-               // cout << "min: " << min_distance << " euc r: " << euclidean_result <<  endl;
                 min_distance = euclidean_result;
             }
             iter++;
         }
         this->states_[state_i_plus_one].suffix_transition_ = s;
-        this->states_[state_i_plus_one].lrs_ = this->LengthCommonSuffix(pi_1,this->states_[state_i_plus_one].suffix_transition_ - 1);
-        //cout << "LRS INSIDE:" << state_i_plus_one << "-- "<< this->states_[state_i_plus_one].lrs_ << endl;
+        this->states_[state_i_plus_one].lrs_ = this->LengthCommonSuffix(pi_1,this->states_[state_i_plus_one].suffix_transition_ - 1);*/
     }
     /*if (k != 0)
     {
@@ -484,77 +695,60 @@ void AudioOracle::AddFrame(int i, vector <mrs_real> vector_real, double threshol
     this->T[this->states_[state_i_plus_one].suffix_transition_].push_back(state_i_plus_one);
 }
 
-
-void AudioOracle::AudioOracleStart(string word)
+void AudioOracle::FindBetter(vector <mrs_real> vector_real, int state_i_plus_one, int hop_size)
 {
-    //! A normal member taking one argument and returning no value.
-    /*!
-      \param word a string argument.
-    */
-    int len = word.size();
-    this->states_.resize(len+1);
-    //SingleTransition statezero; /*!< Create state 0 */
-    this->states_[0].state_ = 0;
-    this->states_[0].lrs_ = 0;
-    this->states_[0].suffix_transition_ = -1; /*!< S[0] = -1 */
-    this->T.resize(len+1);
-    if (len+1 != 1)
-    {
-        for (int i = 1; i <= len; i++)
-        {
-            /*!< for i <- 1 to m
-            * do AddFrame(i)
-            */
-            this->AddFrame(i, {}, 0.05, 0, 4096);
+    int s = 0;
+    int flag = 0, iter = 0;
+    double min_distance = INFINITY;
+    cout << "INSIDE FINDBETTER" << endl;
+    while (iter < this->states_[k].transition_.size()) {
+
+        double *v1_pointer = &(vector_real[0]);
+        double *v2_pointer = &(this->states_[k].transition_[iter].vector_real_[0]);
+        cout << "inside last: " << *v1_pointer << " " << *v2_pointer << endl;
+        double euclidean_result = VectorDistance(v1_pointer, (v1_pointer + (hop_size-1)), v2_pointer);
+
+        if (euclidean_result < min_distance) {
+            s = this->states_[k].transition_[iter].last_state_;
+            //   cout << "s prev: " << s << " k: " << k << endl;
+            cout << "min: " << min_distance << " euc r: " << euclidean_result <<  endl;
+            min_distance = euclidean_result;
         }
+        iter++;
     }
-    
-    for (int i = 0; i < len+1; i++){
-
-        cout << "STATE[" << i << "]:\n" << "LRS: "<< this->states_[i].lrs_ << "\n";
-        cout << "Suffix: " << this->states_[i].suffix_transition_ << "\n";
-        cout << "Transitions: " << "\n";
-        for (int w = 0; w < this->states_[i].transition_.size(); w++)
-        {
-            cout << this->states_[i].transition_[w].first_state_ << " " << this->states_[i].transition_[w].last_state_ << " "  << this->states_[i].transition_[w].vector_real_[0] << "\n";
-        }
-        cout << "\n";
-
-    }
-
-    string oracle = "";
-    fo_iter = 1;
-    int q = 0;
-    cout << "Input the q value: ";
-    cin >> q;
-   /* for (int x = 0; x < len; x++)
-    {
-        oracle = this->FOGenerate(fo_iter,oracle,q);
-        if (fo_iter == len)
-            fo_iter = len-1;
-        cout << "Factor Oracle Sequence: " << oracle << "\n";
-
-    }*/
+    this->states_[state_i_plus_one].suffix_transition_ = s;
+    this->states_[state_i_plus_one].lrs_ = this->LengthCommonSuffix(pi_1,this->states_[state_i_plus_one].suffix_transition_ - 1);
 
 }
 
-/*
-void AudioOracle::CallGenerate(int len, float q)
+MarSystem* AudioOracle::RealTimeInitialize(bool isInitialized)
 {
-    vector<T> oracle = {};
-    fo_iter = 1;
-    // int q = 0;
-    // cout << "Input the q value: ";
-    // cin >> q;
-    for (int x = 0; x < len; x++)
-    {
-        oracle = this->AOGenerate(fo_iter,oracle,q);
-        if (fo_iter == len)
-            fo_iter = len-1;
-        for (int w = 0; w < oracle.size(); w++)
-            cout << oracle[w] << " ";
-        cout << endl;
-    }
+    Marsyas::MarSystemManager mng;
+    Marsyas::MarSystem* realAudio = mng.create("Series", "realAudio");
+    // standard network
+    realAudio->addMarSystem(mng.create("AudioSourceBlocking", "src"));
+    realAudio->updControl("AudioSourceBlocking/src/mrs_bool/initAudio", true);
+    realAudio->updControl("AudioSourceBlocking/src/mrs_natural/bufferSize", 8192);
+    realAudio->updControl("AudioSourceBlocking/src/mrs_natural/nChannels", 2);
+/*    realAudio->addMarSystem(mng.create("AudioSource", "src"));
+    realAudio->updControl("AudioSource/src/mrs_bool/realtime",true);
+    realAudio->updControl("AudioSource/src/mrs_bool/initAudio", true);
+    realAudio->updControl("AudioSource/src/mrs_natural/bufferSize", 8192);
+    realAudio->updControl("AudioSource/src/mrs_natural/nChannels", 1);*/
 
-};
-*/
+    return realAudio;
+}
+
+MarSystem* AudioOracle::RealTimeStop(MarSystem* realAudio, bool stop)
+{
+    realAudio->updControl("AudioSourceBlocking/src/mrs_bool/initAudio", false);
+    int buffer = realAudio->getControl("AudioSourceBlocking/src/mrs_natural/bufferSize")->to<mrs_natural>();
+    int size = realAudio->getControl("AudioSourceBlocking/src/mrs_natural/nBuffers")->to<mrs_natural>();
+    bool hasData = realAudio->getControl("AudioSourceBlocking/src/mrs_bool/hasData")->to<mrs_bool>();
+/*    realAudio->updControl("AudioSource/src/mrs_bool/initAudio", false);
+    int buffer = realAudio->getControl("AudioSource/src/mrs_natural/bufferSize")->to<mrs_natural>();
+    bool hasData = realAudio->getControl("AudioSource/src/mrs_bool/hasData")->to<mrs_bool>();*/
+    cout << "hasData: " << hasData << endl;
+    cout << "buffer: " << buffer << endl;
+    cout << "size: " << size << endl;
+}

@@ -70,20 +70,156 @@ CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/marsyas_play_file.cpp -o CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.s
 
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o: ../3rd-party/lib/Gist/src/Gist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Gist.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Gist.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Gist.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o: ../3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o   -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o: ../3rd-party/lib/Gist/src/AccelerateFFT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/AccelerateFFT.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/AccelerateFFT.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/AccelerateFFT.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o: ../3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o: ../3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o: ../3rd-party/lib/Gist/src/MFCC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/MFCC.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/MFCC.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/MFCC.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o: ../3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o: ../3rd-party/lib/Gist/src/WindowFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/WindowFunctions.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/WindowFunctions.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/WindowFunctions.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o: CMakeFiles/AudioOracleEx.dir/flags.make
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o: ../3rd-party/lib/Gist/src/Yin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o -c /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Yin.cpp
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Yin.cpp > CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.i
+
+CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Yin.cpp -o CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.s
+
 # Object files for target AudioOracleEx
 AudioOracleEx_OBJECTS = \
-"CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o"
+"CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o" \
+"CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o"
 
 # External object files for target AudioOracleEx
 AudioOracleEx_EXTERNAL_OBJECTS =
 
 AudioOracleEx: CMakeFiles/AudioOracleEx.dir/src/marsyas_play_file.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+AudioOracleEx: CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o
 AudioOracleEx: CMakeFiles/AudioOracleEx.dir/build.make
 AudioOracleEx: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/lib/libmarsyas.dylib
 AudioOracleEx: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/lib/libmarsyas-qt5.a
+AudioOracleEx: /usr/local/lib/libportaudio.a
 AudioOracleEx: libAO.a
 AudioOracleEx: CMakeFiles/AudioOracleEx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AudioOracleEx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable AudioOracleEx"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AudioOracleEx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -11,6 +11,8 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"
+  "/Users/mariapaulacarrero/Downloads/portaudio/include"
+  "/Users/mariapaulacarrero/Downloads/Gist-master/src"
   )
 
 # Targets to which this target links.

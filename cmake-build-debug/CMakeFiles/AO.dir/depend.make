@@ -24,4 +24,5 @@ CMakeFiles/AO.dir/src/AudioOracle.cpp.o: /Users/mariapaulacarrero/Downloads/mars
 CMakeFiles/AO.dir/src/AudioOracle.cpp.o: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include/marsyas/system/MarSystem.h
 CMakeFiles/AO.dir/src/AudioOracle.cpp.o: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include/marsyas/system/MarSystemManager.h
 CMakeFiles/AO.dir/src/AudioOracle.cpp.o: /Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include/marsyas/types.h
+CMakeFiles/AO.dir/src/AudioOracle.cpp.o: /Users/mariapaulacarrero/Downloads/portaudio/include/portaudio.h
 

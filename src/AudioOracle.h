@@ -110,15 +110,27 @@ public:
     map <int, double*> feature_map;
     void AddFrame( int i, vector <mrs_real> vector_real, double threshold, int start_frame, int hop_size);
     void CreateState(int m);
-    void AnalyseAudio(string sfName, int hop_size);
+    void AnalyseAudio(string sfName, int hop_size, string feature);
     int LengthCommonSuffix(int phi_one, int phi_two);
     void FindBetter(int i, double threshold, vector <mrs_real> vector_real);
     vector<int> AOGenerate(int i, int total_length, float q, int k);
     void GenerateAudio(int i, int total_length, float q, int k, int hop_size, int buffer_size, string input_filename, string output_filename);
-    void AudioOracleStart( string word);
-    vector<double> MakeWindow(int n);
-    void AddState(int first_state);
+    static vector<double> MakeWindow(int n);
+    static double VectorDistance(double *first, double* last, double *first2);
+    void FindBetter(vector <mrs_real> vector_real, int state_i_plus_one, int hop_size);
+    void AddState(int first_state, int state, int start_frame);
     void AddTransition(int first_state, int last_state, vector <mrs_real> vector_real, int feature_state, int starting_frame);
+    void AddInitialTransition();
+    void CentroidFeatureExtraction(MarSystem* pnet, int hop_size, string feature);
+    void SpectrumFeatureExtraction(MarSystem* pnet, int hop_size, string feature);
+    void PowerSpectrumFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    void MFCCFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    void ChromaFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    void RootMeanSquareFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    void ZeroCrossingsFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    void RolloffFeatureExtraction(MarSystem *pnet, int hop_size, string feature);
+    MarSystem* RealTimeInitialize(bool isInitialized);
+    MarSystem* RealTimeStop(MarSystem* realAudio, bool stop);
 };
 
 

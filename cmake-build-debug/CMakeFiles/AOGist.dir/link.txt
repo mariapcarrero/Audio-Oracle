@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libAOGist.a  CMakeFiles/AOGist.dir/src/AudioOracleGist.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libAOGist.a

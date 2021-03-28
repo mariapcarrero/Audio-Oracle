@@ -35,6 +35,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -57,6 +59,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -66,94 +70,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioOracleOutput/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestFOS">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestFOS/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AudioRearrange">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioRearrange" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioRearrange"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AudioRearrange/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioRearrange" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioRearrange/fast"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -177,6 +93,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -199,6 +117,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -213,58 +133,16 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AO">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAO.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AO"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AO/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAO.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AO/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestLCS">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+			<Target title="AudioOracleComplete">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioOracleComplete" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -273,20 +151,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioOracleComplete"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TestLCS/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+			<Target title="AudioOracleComplete/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioOracleComplete" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -295,95 +175,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestAddLetter">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestAddLetter/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="FO">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="FO/fast">
-				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO/fast"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioOracleComplete/fast"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -397,6 +189,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -419,6 +213,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -433,6 +229,390 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="AudioOracleGist">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioOracleGist" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioOracleGist"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AudioOracleGist/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioOracleGist" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioOracleGist/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AOGist">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAOGist.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AOGist"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AOGist/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAOGist.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AOGist/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AO">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AO"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AO/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libAO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AO/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AudioRearrange">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioRearrange" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioRearrange"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AudioRearrange/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/AudioRearrange" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 AudioRearrange/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFOS">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestFOS/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestFOS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestFOS/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLCS">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLCS/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestLCS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestLCS/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestAddLetter">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestAddLetter/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestAddLetter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestAddLetter/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FO">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FO/fast">
+				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/libFO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 FO/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="TestFindBetter">
 				<Option output="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug/TestFindBetter" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/cmake-build-debug"/>
@@ -441,6 +621,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -463,6 +645,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/portaudio/include"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
@@ -493,17 +677,125 @@
 			<Option target="TestAddLetter"/>
 			<Option target="TestFindBetter"/>
 		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/AccelerateFFT.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/AccelerateFFT.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Gist.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Gist.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/MFCC.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/MFCC.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/OnsetDetectionFunction.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/WindowFunctions.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/WindowFunctions.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Yin.cpp">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/3rd-party/lib/Gist/src/Yin.h">
+			<Option target="AudioOracleEx"/>
+			<Option target="AudioOracleComplete"/>
+			<Option target="AudioOracleGist"/>
+		</Unit>
 		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.cpp">
 			<Option target="AO"/>
 		</Unit>
 		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracle.h">
 			<Option target="AO"/>
 		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracleComplete.cpp">
+			<Option target="AudioOracleComplete"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracleComplete.h">
+			<Option target="AudioOracleComplete"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracleGist.cpp">
+			<Option target="AOGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/AudioOracleGist.h">
+			<Option target="AOGist"/>
+		</Unit>
 		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/Factor-Oracle/FactorOracle.cpp">
 			<Option target="FO"/>
 		</Unit>
 		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/Factor-Oracle/FactorOracle.h">
 			<Option target="FO"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/gist_play_file.cpp">
+			<Option target="AudioOracleGist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/gist_play_file.h">
+			<Option target="AudioOracleGist"/>
 		</Unit>
 		<Unit filename="/Users/mariapaulacarrero/Documents/GitHub/Audio-Oracle/src/main.cpp">
 			<Option target="FactorOracleString"/>

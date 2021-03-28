@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libGist.a  CMakeFiles/Gist.dir/AccelerateFFT.cpp.o CMakeFiles/Gist.dir/CoreFrequencyDomainFeatures.cpp.o CMakeFiles/Gist.dir/CoreTimeDomainFeatures.cpp.o CMakeFiles/Gist.dir/Gist.cpp.o CMakeFiles/Gist.dir/MFCC.cpp.o CMakeFiles/Gist.dir/OnsetDetectionFunction.cpp.o CMakeFiles/Gist.dir/WindowFunctions.cpp.o CMakeFiles/Gist.dir/Yin.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libGist.a

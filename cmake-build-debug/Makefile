@@ -119,17 +119,82 @@ AudioOracleOutput/fast:
 .PHONY : AudioOracleOutput/fast
 
 #=============================================================================
-# Target rules for targets named TestFOS
+# Target rules for targets named AudioOracleEx
 
 # Build rule for target.
-TestFOS:
-	$(MAKE) -f CMakeFiles/Makefile2 TestFOS
-.PHONY : TestFOS
+AudioOracleEx:
+	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleEx
+.PHONY : AudioOracleEx
 
 # fast build rule for target.
-TestFOS/fast:
-	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/build
-.PHONY : TestFOS/fast
+AudioOracleEx/fast:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/build
+.PHONY : AudioOracleEx/fast
+
+#=============================================================================
+# Target rules for targets named AudioOracleComplete
+
+# Build rule for target.
+AudioOracleComplete:
+	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleComplete
+.PHONY : AudioOracleComplete
+
+# fast build rule for target.
+AudioOracleComplete/fast:
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/build
+.PHONY : AudioOracleComplete/fast
+
+#=============================================================================
+# Target rules for targets named FactorOracleString
+
+# Build rule for target.
+FactorOracleString:
+	$(MAKE) -f CMakeFiles/Makefile2 FactorOracleString
+.PHONY : FactorOracleString
+
+# fast build rule for target.
+FactorOracleString/fast:
+	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/build
+.PHONY : FactorOracleString/fast
+
+#=============================================================================
+# Target rules for targets named AudioOracleGist
+
+# Build rule for target.
+AudioOracleGist:
+	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleGist
+.PHONY : AudioOracleGist
+
+# fast build rule for target.
+AudioOracleGist/fast:
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/build
+.PHONY : AudioOracleGist/fast
+
+#=============================================================================
+# Target rules for targets named AOGist
+
+# Build rule for target.
+AOGist:
+	$(MAKE) -f CMakeFiles/Makefile2 AOGist
+.PHONY : AOGist
+
+# fast build rule for target.
+AOGist/fast:
+	$(MAKE) -f CMakeFiles/AOGist.dir/build.make CMakeFiles/AOGist.dir/build
+.PHONY : AOGist/fast
+
+#=============================================================================
+# Target rules for targets named AO
+
+# Build rule for target.
+AO:
+	$(MAKE) -f CMakeFiles/Makefile2 AO
+.PHONY : AO
+
+# fast build rule for target.
+AO/fast:
+	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/build
+.PHONY : AO/fast
 
 #=============================================================================
 # Target rules for targets named AudioRearrange
@@ -145,30 +210,17 @@ AudioRearrange/fast:
 .PHONY : AudioRearrange/fast
 
 #=============================================================================
-# Target rules for targets named AudioOracleEx
+# Target rules for targets named TestFOS
 
 # Build rule for target.
-AudioOracleEx:
-	$(MAKE) -f CMakeFiles/Makefile2 AudioOracleEx
-.PHONY : AudioOracleEx
+TestFOS:
+	$(MAKE) -f CMakeFiles/Makefile2 TestFOS
+.PHONY : TestFOS
 
 # fast build rule for target.
-AudioOracleEx/fast:
-	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/build
-.PHONY : AudioOracleEx/fast
-
-#=============================================================================
-# Target rules for targets named AO
-
-# Build rule for target.
-AO:
-	$(MAKE) -f CMakeFiles/Makefile2 AO
-.PHONY : AO
-
-# fast build rule for target.
-AO/fast:
-	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/build
-.PHONY : AO/fast
+TestFOS/fast:
+	$(MAKE) -f CMakeFiles/TestFOS.dir/build.make CMakeFiles/TestFOS.dir/build
+.PHONY : TestFOS/fast
 
 #=============================================================================
 # Target rules for targets named TestLCS
@@ -210,19 +262,6 @@ FO/fast:
 .PHONY : FO/fast
 
 #=============================================================================
-# Target rules for targets named FactorOracleString
-
-# Build rule for target.
-FactorOracleString:
-	$(MAKE) -f CMakeFiles/Makefile2 FactorOracleString
-.PHONY : FactorOracleString
-
-# fast build rule for target.
-FactorOracleString/fast:
-	$(MAKE) -f CMakeFiles/FactorOracleString.dir/build.make CMakeFiles/FactorOracleString.dir/build
-.PHONY : FactorOracleString/fast
-
-#=============================================================================
 # Target rules for targets named TestFindBetter
 
 # Build rule for target.
@@ -234,6 +273,303 @@ TestFindBetter:
 TestFindBetter/fast:
 	$(MAKE) -f CMakeFiles/TestFindBetter.dir/build.make CMakeFiles/TestFindBetter.dir/build
 .PHONY : TestFindBetter/fast
+
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.o: 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.o
+
+# target to build an object file
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.o
+
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.i: 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.i
+
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.s: 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+.PHONY : 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.c.s
+
+3rd-party/lib/Gist/src/AccelerateFFT.o: 3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/AccelerateFFT.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.cpp.o
+
+3rd-party/lib/Gist/src/AccelerateFFT.i: 3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/AccelerateFFT.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.cpp.i
+
+3rd-party/lib/Gist/src/AccelerateFFT.s: 3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/AccelerateFFT.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/AccelerateFFT.cpp.s
+
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.o: 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.o
+
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.i: 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.i
+
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.s: 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.cpp.s
+
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.o: 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.o
+
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.i: 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.i
+
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.s: 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.cpp.s
+
+3rd-party/lib/Gist/src/Gist.o: 3rd-party/lib/Gist/src/Gist.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/Gist.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/Gist.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Gist.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Gist.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/Gist.cpp.o
+
+3rd-party/lib/Gist/src/Gist.i: 3rd-party/lib/Gist/src/Gist.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/Gist.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/Gist.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Gist.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Gist.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/Gist.cpp.i
+
+3rd-party/lib/Gist/src/Gist.s: 3rd-party/lib/Gist/src/Gist.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/Gist.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/Gist.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Gist.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Gist.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Gist.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/Gist.cpp.s
+
+3rd-party/lib/Gist/src/MFCC.o: 3rd-party/lib/Gist/src/MFCC.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/MFCC.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/MFCC.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/MFCC.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/MFCC.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/MFCC.cpp.o
+
+3rd-party/lib/Gist/src/MFCC.i: 3rd-party/lib/Gist/src/MFCC.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/MFCC.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/MFCC.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/MFCC.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/MFCC.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/MFCC.cpp.i
+
+3rd-party/lib/Gist/src/MFCC.s: 3rd-party/lib/Gist/src/MFCC.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/MFCC.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/MFCC.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/MFCC.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/MFCC.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/MFCC.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/MFCC.cpp.s
+
+3rd-party/lib/Gist/src/OnsetDetectionFunction.o: 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.o
+
+3rd-party/lib/Gist/src/OnsetDetectionFunction.i: 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.i
+
+3rd-party/lib/Gist/src/OnsetDetectionFunction.s: 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/OnsetDetectionFunction.cpp.s
+
+3rd-party/lib/Gist/src/WindowFunctions.o: 3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/WindowFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.cpp.o
+
+3rd-party/lib/Gist/src/WindowFunctions.i: 3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/WindowFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.cpp.i
+
+3rd-party/lib/Gist/src/WindowFunctions.s: 3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/WindowFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/WindowFunctions.cpp.s
+
+3rd-party/lib/Gist/src/Yin.o: 3rd-party/lib/Gist/src/Yin.cpp.o
+
+.PHONY : 3rd-party/lib/Gist/src/Yin.o
+
+# target to build an object file
+3rd-party/lib/Gist/src/Yin.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Yin.cpp.o
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Yin.cpp.o
+.PHONY : 3rd-party/lib/Gist/src/Yin.cpp.o
+
+3rd-party/lib/Gist/src/Yin.i: 3rd-party/lib/Gist/src/Yin.cpp.i
+
+.PHONY : 3rd-party/lib/Gist/src/Yin.i
+
+# target to preprocess a source file
+3rd-party/lib/Gist/src/Yin.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Yin.cpp.i
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Yin.cpp.i
+.PHONY : 3rd-party/lib/Gist/src/Yin.cpp.i
+
+3rd-party/lib/Gist/src/Yin.s: 3rd-party/lib/Gist/src/Yin.cpp.s
+
+.PHONY : 3rd-party/lib/Gist/src/Yin.s
+
+# target to generate assembly for a file
+3rd-party/lib/Gist/src/Yin.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleEx.dir/build.make CMakeFiles/AudioOracleEx.dir/3rd-party/lib/Gist/src/Yin.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/3rd-party/lib/Gist/src/Yin.cpp.s
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/3rd-party/lib/Gist/src/Yin.cpp.s
+.PHONY : 3rd-party/lib/Gist/src/Yin.cpp.s
 
 src/AudioOracle.o: src/AudioOracle.cpp.o
 
@@ -262,6 +598,60 @@ src/AudioOracle.cpp.s:
 	$(MAKE) -f CMakeFiles/AO.dir/build.make CMakeFiles/AO.dir/src/AudioOracle.cpp.s
 .PHONY : src/AudioOracle.cpp.s
 
+src/AudioOracleComplete.o: src/AudioOracleComplete.cpp.o
+
+.PHONY : src/AudioOracleComplete.o
+
+# target to build an object file
+src/AudioOracleComplete.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/src/AudioOracleComplete.cpp.o
+.PHONY : src/AudioOracleComplete.cpp.o
+
+src/AudioOracleComplete.i: src/AudioOracleComplete.cpp.i
+
+.PHONY : src/AudioOracleComplete.i
+
+# target to preprocess a source file
+src/AudioOracleComplete.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/src/AudioOracleComplete.cpp.i
+.PHONY : src/AudioOracleComplete.cpp.i
+
+src/AudioOracleComplete.s: src/AudioOracleComplete.cpp.s
+
+.PHONY : src/AudioOracleComplete.s
+
+# target to generate assembly for a file
+src/AudioOracleComplete.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleComplete.dir/build.make CMakeFiles/AudioOracleComplete.dir/src/AudioOracleComplete.cpp.s
+.PHONY : src/AudioOracleComplete.cpp.s
+
+src/AudioOracleGist.o: src/AudioOracleGist.cpp.o
+
+.PHONY : src/AudioOracleGist.o
+
+# target to build an object file
+src/AudioOracleGist.cpp.o:
+	$(MAKE) -f CMakeFiles/AOGist.dir/build.make CMakeFiles/AOGist.dir/src/AudioOracleGist.cpp.o
+.PHONY : src/AudioOracleGist.cpp.o
+
+src/AudioOracleGist.i: src/AudioOracleGist.cpp.i
+
+.PHONY : src/AudioOracleGist.i
+
+# target to preprocess a source file
+src/AudioOracleGist.cpp.i:
+	$(MAKE) -f CMakeFiles/AOGist.dir/build.make CMakeFiles/AOGist.dir/src/AudioOracleGist.cpp.i
+.PHONY : src/AudioOracleGist.cpp.i
+
+src/AudioOracleGist.s: src/AudioOracleGist.cpp.s
+
+.PHONY : src/AudioOracleGist.s
+
+# target to generate assembly for a file
+src/AudioOracleGist.cpp.s:
+	$(MAKE) -f CMakeFiles/AOGist.dir/build.make CMakeFiles/AOGist.dir/src/AudioOracleGist.cpp.s
+.PHONY : src/AudioOracleGist.cpp.s
+
 src/Factor-Oracle/FactorOracle.o: src/Factor-Oracle/FactorOracle.cpp.o
 
 .PHONY : src/Factor-Oracle/FactorOracle.o
@@ -288,6 +678,33 @@ src/Factor-Oracle/FactorOracle.s: src/Factor-Oracle/FactorOracle.cpp.s
 src/Factor-Oracle/FactorOracle.cpp.s:
 	$(MAKE) -f CMakeFiles/FO.dir/build.make CMakeFiles/FO.dir/src/Factor-Oracle/FactorOracle.cpp.s
 .PHONY : src/Factor-Oracle/FactorOracle.cpp.s
+
+src/gist_play_file.o: src/gist_play_file.cpp.o
+
+.PHONY : src/gist_play_file.o
+
+# target to build an object file
+src/gist_play_file.cpp.o:
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/src/gist_play_file.cpp.o
+.PHONY : src/gist_play_file.cpp.o
+
+src/gist_play_file.i: src/gist_play_file.cpp.i
+
+.PHONY : src/gist_play_file.i
+
+# target to preprocess a source file
+src/gist_play_file.cpp.i:
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/src/gist_play_file.cpp.i
+.PHONY : src/gist_play_file.cpp.i
+
+src/gist_play_file.s: src/gist_play_file.cpp.s
+
+.PHONY : src/gist_play_file.s
+
+# target to generate assembly for a file
+src/gist_play_file.cpp.s:
+	$(MAKE) -f CMakeFiles/AudioOracleGist.dir/build.make CMakeFiles/AudioOracleGist.dir/src/gist_play_file.cpp.s
+.PHONY : src/gist_play_file.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -512,22 +929,61 @@ help:
 	@echo "... clean"
 	@echo "... rebuild_cache"
 	@echo "... AudioOracleOutput"
-	@echo "... TestFOS"
-	@echo "... AudioRearrange"
 	@echo "... edit_cache"
 	@echo "... AudioOracleEx"
+	@echo "... AudioOracleComplete"
+	@echo "... FactorOracleString"
+	@echo "... AudioOracleGist"
+	@echo "... AOGist"
 	@echo "... AO"
+	@echo "... AudioRearrange"
+	@echo "... TestFOS"
 	@echo "... TestLCS"
 	@echo "... TestAddLetter"
 	@echo "... FO"
-	@echo "... FactorOracleString"
 	@echo "... TestFindBetter"
+	@echo "... 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.o"
+	@echo "... 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.i"
+	@echo "... 3rd-party/lib/Gist/libs/kiss_fft130/kiss_fft.s"
+	@echo "... 3rd-party/lib/Gist/src/AccelerateFFT.o"
+	@echo "... 3rd-party/lib/Gist/src/AccelerateFFT.i"
+	@echo "... 3rd-party/lib/Gist/src/AccelerateFFT.s"
+	@echo "... 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.o"
+	@echo "... 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.i"
+	@echo "... 3rd-party/lib/Gist/src/CoreFrequencyDomainFeatures.s"
+	@echo "... 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.o"
+	@echo "... 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.i"
+	@echo "... 3rd-party/lib/Gist/src/CoreTimeDomainFeatures.s"
+	@echo "... 3rd-party/lib/Gist/src/Gist.o"
+	@echo "... 3rd-party/lib/Gist/src/Gist.i"
+	@echo "... 3rd-party/lib/Gist/src/Gist.s"
+	@echo "... 3rd-party/lib/Gist/src/MFCC.o"
+	@echo "... 3rd-party/lib/Gist/src/MFCC.i"
+	@echo "... 3rd-party/lib/Gist/src/MFCC.s"
+	@echo "... 3rd-party/lib/Gist/src/OnsetDetectionFunction.o"
+	@echo "... 3rd-party/lib/Gist/src/OnsetDetectionFunction.i"
+	@echo "... 3rd-party/lib/Gist/src/OnsetDetectionFunction.s"
+	@echo "... 3rd-party/lib/Gist/src/WindowFunctions.o"
+	@echo "... 3rd-party/lib/Gist/src/WindowFunctions.i"
+	@echo "... 3rd-party/lib/Gist/src/WindowFunctions.s"
+	@echo "... 3rd-party/lib/Gist/src/Yin.o"
+	@echo "... 3rd-party/lib/Gist/src/Yin.i"
+	@echo "... 3rd-party/lib/Gist/src/Yin.s"
 	@echo "... src/AudioOracle.o"
 	@echo "... src/AudioOracle.i"
 	@echo "... src/AudioOracle.s"
+	@echo "... src/AudioOracleComplete.o"
+	@echo "... src/AudioOracleComplete.i"
+	@echo "... src/AudioOracleComplete.s"
+	@echo "... src/AudioOracleGist.o"
+	@echo "... src/AudioOracleGist.i"
+	@echo "... src/AudioOracleGist.s"
 	@echo "... src/Factor-Oracle/FactorOracle.o"
 	@echo "... src/Factor-Oracle/FactorOracle.i"
 	@echo "... src/Factor-Oracle/FactorOracle.s"
+	@echo "... src/gist_play_file.o"
+	@echo "... src/gist_play_file.i"
+	@echo "... src/gist_play_file.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

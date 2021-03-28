@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Gist"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gist">
+				<Option output="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/libGist.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_KISS_FFT"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src/src"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src/../libs/kiss_fft130"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Gist"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gist/fast">
+				<Option output="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/libGist.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_KISS_FFT"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src/src"/>
+					<Add directory="/Users/mariapaulacarrero/Downloads/Gist-master/src/../libs/kiss_fft130"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Gist/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/mariapaulacarrero/Downloads/Gist-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/AccelerateFFT.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/AccelerateFFT.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/CoreFrequencyDomainFeatures.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/CoreFrequencyDomainFeatures.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/CoreTimeDomainFeatures.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/CoreTimeDomainFeatures.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/Gist.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/Gist.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/MFCC.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/MFCC.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/OnsetDetectionFunction.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/OnsetDetectionFunction.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/WindowFunctions.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/WindowFunctions.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/Yin.cpp">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/Yin.h">
+			<Option target="Gist"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mariapaulacarrero/Downloads/Gist-master/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

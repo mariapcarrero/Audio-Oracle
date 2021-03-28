@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sd
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include 
+CXX_INCLUDES = -I/Users/mariapaulacarrero/Downloads/marsyas-0.5.0/include -I/Users/mariapaulacarrero/Downloads/portaudio/include -I/Users/mariapaulacarrero/Downloads/Gist-master/src 
 
